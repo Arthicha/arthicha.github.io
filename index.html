@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html>
+<body style="background-color:black;">
 <form>
-<input name="pass" id="pass" type="password">
-<input type="button" value="Submit" onclick="myFunction()">
+
+<style>
+.button {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.password {
+  background-color: #555555; /* Green */
+  border: none;
+  color: gray;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+</style>
 </form> 
 
+<center class="container">
+
+	<p> <b style="color:white;font-size: 22px;"> Please enter the password </b> </p>
+	<input class="password" name="password" id="password" type="password">
+    <input class="button" type="button" value="Submit" onclick="myFunction()">
+</center>
 
 <script>
 function myFunction(){
   var pass = document.getElementById("pass").value;
 
-if(pass == "2917"){
-            window.location.href="main.html"
+	if(pass == "2917"){
+        window.location.href="main.html"
         <!-- alert("correct!"); -->
    }else{
-    <!-- alert("Incorrect!"); -->
+    	<!-- alert("Incorrect!"); -->
     }
 }
 </script>
