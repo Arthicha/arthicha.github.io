@@ -2,6 +2,12 @@
 <html>
 <body style="background-color:black;">
 <form>
+<center class="container">
+	<p> <b style="color:white;font-size: 22px;"> Please enter the password </b> </p>
+	<input class="password" name="password" id="password" type="password">
+    <input class="button" type="button" value="Submit" onclick="myFunction()">
+</center>
+
 
 <style>
 .button {
@@ -40,16 +46,11 @@
 </style>
 </form> 
 
-<center class="container">
 
-	<p> <b style="color:white;font-size: 22px;"> Please enter the password </b> </p>
-	<input class="password" name="password" id="password" type="password">
-    <input class="button" type="button" value="Submit" onclick="myFunction()">
-</center>
 
 <script>
 function myFunction(){
-  var pass = document.getElementById("pass").value;
+  var pass = document.getElementById("password").value;
 
 	if(pass == "2917"){
         window.location.href="main.html"
@@ -59,4 +60,6 @@ function myFunction(){
     }
 }
 </script>
+
+
 </html>
