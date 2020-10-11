@@ -1,14 +1,23 @@
+<!DOCTYPE html>
 <html>
-<body>
+<form>
+<input name="username" id="username" type="text">
+<input name="pass" id="pass" type="password">
+<input type="button" value="Submit" onclick="myFunction()">
+</form> 
 
-<form method="POST">
-  <?php if( $_SERVER['REQUEST_METHOD'] == 'POST' ) { ?>
-    Invalid password
-  <?php } ?>
-  <p>Enter password for access:</p>
-  <input type="password" name="password">
-  <button type="submit">Submit</button>
-</form>
 
-</body>
+<script>
+function myFunction(){
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("pass").value;
+
+if(user == "Admin" && pass == "Password"){
+            window.location.href="win.html"
+        alert("correct");
+   }else{
+    alert("Incorrect username or password");
+    }
+}
+</script>
 </html>
