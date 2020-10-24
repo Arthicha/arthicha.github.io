@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+.button {
+  background-color: #2E9CCA; /* Green */
+  border: none;
+  color: white;
+  padding: 0.1vw 0.1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8vw;
+  margin: 0.1vw 0.1vw;
+  cursor: pointer;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #AAABB8;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 15%;
+  text-align: center;
+  padding: 1.2vw 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.2vw;
+}
+
+.icon-bar a:hover {
+  background-color: #29648A;
+}
+
+.active {
+  background-color: #AAABB8; /* Green */
+  color = Navy
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallcol {
+    width:24%;
+    height:20vh;
+    float: left;
+   background-color:white;
+   position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+ }
+
+.maincol {
+    width:74%;
+    height:1000.0vh;
+    float: left;
+   background-color:white;
+   border-right: 1px solid black;
+   vertical-align:sub;
+   line-height: 0vw;
+ }
+
+p.paragraph {
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size:1.2vw;color: black;margin-bottom:1.0vw;margin-left:0vw;margin-top:0.5vw;margin-right:2vw
+
+}
+
+.project {
+  background-color: #000000;
+  border: none;
+  color: black;
+  font-size: 0vw;
+  cursor: pointer;
+  padding: 0.0vw 0.0vw;
+  margin: 0.0vw 0.0vw;
+  vertical-align:sub;
+  line-height: 0vw;
+
+
+}
+
+.project img {
+  opacity: 0.3;
+  vertical-align:sub;
+  height:18vw;
+  width:24.448vw;
+  padding: 0.0vw 0.0vw;
+  margin: 0.0vw 0.0vw;
+  line-height: 0vw;
+  transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+   transition: 0.3s;
+   background-size: cover;
+   z-index: 0;
+   position: relative;
+  top: 0;
+  left: 0;
+  filter: blur(0.1vw)
+}
+
+
+.projectbg {
+  display: inline-block;
+  background: rgba(0,0,0,0.8);
+  height:18vw;
+  width:24.448vw;
+  z-index: -1;
+  vertical-align:sub;
+  padding: 0.0vw 0.0vw;
+  margin: 0.0vw 0.0vw;
+  line-height: 0vw;
+  font-size: 5vw;
+  transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+   transition: 0.3s;
+   background-size: cover;
+}
+
+.project img:hover {opacity:0.6;filter: blur(0.0vw)}
+
+.projectname{
+  height:18vw;
+  width:24.448vw;
+  vertical-align:sub;
+  padding: 0.0vw 0.0vw;
+  margin: 0.0vw 0.0vw;
+  line-height: 1vw;
+  color:black;
+  font-size: 50vw;
+  text-align: center;
+   background-size: cover;
+   left: 0px;
+  top: 0px;
+  z-index: 1;
+
+}
+
+
+p.information {
+
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size:1.2vw;
+  color: black;
+  margin-bottom:1.0vw;margin-left:2vw;margin-top:0.5vw;margin-right:2vw;
+  background-color:white;
+  line-height: normal;
+}
+
+</style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="icon-bar">
+  <a class="active" href="main.html" style="text-decoration: none"> <b>HOME</b> </a>
+  <a href="education.html" style="text-decoration: none"> <b>EDUCATION</b></a> 
+  <a href="#" style="text-decoration: none"> <b>EXPERIENCE</b></a> 
+  <a href="publication.html" style="text-decoration: none"> <b>PUBLICATIONS</b></a> 
+  <a href="project.html" style="text-decoration: none"> <b>PROJECT</b></a> 
+</div>
+<img src="pictures/cover.png" width="100%" style="display:block;height:30vw">
+ <div style="background-color: #464866;width: 100%;overflow: auto;height=4mm"> 
+  <p style="color:#464866;font-size:0.5vw"> Hi</p>
+ </div> 
+
+<div class="wrapper">
+
+  <div class="maincol">
+    <br>
+    <div > <b>
+      <span style="color: #29648A;font-size:2.4vw;margin-left:2vw;line-height: 4.8vw;">Completed Project</span>
+    </b> </div>
+    <br>
+    <p class="paragraph" style="margin-left:2vw;margin-bottom: 2vw"> These are some of my previous projects. Click the images for more details. </p> 
+   <a class="project" type="button" value="P1" onclick="clicked(1,6)" > 
+    <div class="projectbg"> <img id="project1" src="pictures/project/drawingbot_test.png" onmouseover="hover(1)" onmouseout="over(1)">
+    </img>
+
+    </div>
+   </a> 
+   
+    <a class="project" type="button" value="P1" onclick="clicked(2,6)">
+    <div class="projectbg"> <img id="project2" src="pictures/project/ravana_test.png" onmouseover="hover(2)" onmouseout="over(2)"> </div>
+   </a> 
+   <a class="project" type="button" value="P1" onclick="clicked(3,6)">
+    <div class="projectbg"> <img id="project3" src="pictures/project/module89_test.png" onmouseover="hover(3)" onmouseout="over(3)"> </div>
+   </a> 
+   <p class="information" id="info1" style="display:none"> 
+        As geckos have shown us a fascinated ability on climbing since it can walk on an incline or vertical wall, researchers have been interested in this ability and they have tried to develop climbing robots that climb like geckos. Their goal is to employ those for video surveillance, maintenance, and inspection. Unfortunately, the performances of those robots are still far from the real ones. To make our climbing robot becomes closer to the real gecko and enhances its ability, the proposed mechanism is inspired by nature. Modular neural control is implemented as the robot’s spinal cord for gait generation. The robot moves according to the signal passed through motor neurons which is the summation of the signal generated from its spinal cord and another signal from low-level artificial hormone mechanism that makes the robot adapt its stretching length on-line. Furthermore, high-level artificial hormone provides confidence-driven behavior. The robot stretching velocity enlarged as well as its locomotion was frozen when the high-level artificial hormone goes above the threshold selected. With the proposed mechanism, the simulated result shows that the gecko robot achieves locomotion on the surface that makes a robot’s foot fall into the lower-level region and the surface with a gap. In addition, the behavior of the real robot with the proposed mechanism is similar to the behavior of the simulated robot. For example, the locomotion is frozen and the robot’s leg stretches when the corresponding leg falls into the lower-level region. After the foot reaches the surface, the robot continues walking. The proposed mechanism is not specific for one structure since it is possible to apply this mechanism of another robot structure which has a joint control foot lifting.
+        </p>
+
+    <p class="information" id="info2" style="display:none"> 
+        In this study, we present a novel neural control architecture for gait adaptation and obstacle avoidance of a tailless gecko robot. The control architecture is based on a hierarchical modular structure, consisting of several neural layers and modules. The frst layer contains three sensory preprocessing modules which flter sensory noise and generate appropriate descending commands to activate corresponding behaviors through the second and third layers. The second and third layers contain a central pattern generator (CPG) module and CPG postprocessing modules, respectively. The CPG module generates basic rhythmic locomotion patterns, shaped by the CPG postprocessing modules to achieve diﬀerent gaits (i.e., wave, intermediate, and trot) as well as different climbing directions (i.e., forward and sideways). We use a body inclination sensor to adapt the robot gait while climbing on diﬀerent slope angles, with infrared sensors to detect an obstacle on its climbing path and activate obstacle avoidance behavior. We successfully tested our control approach on a real tailless gecko robot. As a result, the robot can efciently climb forward on diﬀerent slope angles (including 90°) and automatically adapt its climbing gait accordingly, to maximize climbing speed and ensure stability. It can also avoid an obstacle by changing its climbing direction from forward to sideways.
+        </p>
+
+    <p class="information" id="info3" style="display:none"> 
+        Geckos are highly adaptable creatures, able to scale a variety of slopes, including walls, and can change their gait depending on their environment. Roboticists have tried to implement this behaviour in gecko robots. So far, an open-loop controlled robot without a tail that uses only one specific gait can climb to a 50° slope. In this paper, we propose neural control that allows a gecko robot to climb to a 70° slope by generating different gaits for various slope angles. The control consists of three main components: a central pattern generator (CPG) for generating various rhythmic patterns, CPG post-processing for shaping the CPG signals, and a delay line for transmitting the shaped CPG signals to drive the legs of the gecko robot. The robot uses a body inclination sensor to provide sensory feedback for gait adaptation. When the incline is below 35°, the robot walks with a predefined fast trot gait. If the incline is increased, it will change its gait from the trot gait to an intermediate gait, followed by a slow wave gait, which is both the most stable and the slowest gait, for climbing the steepest slopes. Using this walking strategy, the robot can efficiently climb a variety of slopes using different gaits and can automatically adapt its gait to maximise speed while ensuring stability.
+        </p>
+   
+
+  
+   <a class="project" type="button" value="P1" onclick="clicked(4,6)">
+    <div class="projectbg"> <img id="project4" src="pictures/project/drawingbot_test.png" onmouseover="hover(4)" onmouseout="over(4)"> </div>
+   </a> 
+   <a class="project" type="button" value="P1" onclick="clicked(5,6)">
+    <div class="projectbg"> <img id="project5" src="pictures/project/module89_test.png" onmouseover="hover(5)" onmouseout="over(5)"> </div>
+   </a> 
+   <a class="project" type="button" value="P1" onclick="clicked(6,6)">
+    <div class="projectbg"> <img id="project6" src="pictures/project/module89_test.png" onmouseover="hover(6)" onmouseout="over(6)"> </div>
+   </a> 
+   <p class="information" id="info4" style="display:none"> 
+        As geckos have shown us a fascinated ability on climbing since it can walk on an incline or vertical wall, researchers have been interested in this ability and they have tried to develop climbing robots that climb like geckos. Their goal is to employ those for video surveillance, maintenance, and inspection. Unfortunately, the performances of those robots are still far from the real ones. To make our climbing robot becomes closer to the real gecko and enhances its ability, the proposed mechanism is inspired by nature. Modular neural control is implemented as the robot’s spinal cord for gait generation. The robot moves according to the signal passed through motor neurons which is the summation of the signal generated from its spinal cord and another signal from low-level artificial hormone mechanism that makes the robot adapt its stretching length on-line. Furthermore, high-level artificial hormone provides confidence-driven behavior. The robot stretching velocity enlarged as well as its locomotion was frozen when the high-level artificial hormone goes above the threshold selected. With the proposed mechanism, the simulated result shows that the gecko robot achieves locomotion on the surface that makes a robot’s foot fall into the lower-level region and the surface with a gap. In addition, the behavior of the real robot with the proposed mechanism is similar to the behavior of the simulated robot. For example, the locomotion is frozen and the robot’s leg stretches when the corresponding leg falls into the lower-level region. After the foot reaches the surface, the robot continues walking. The proposed mechanism is not specific for one structure since it is possible to apply this mechanism of another robot structure which has a joint control foot lifting.
+        </p>
+
+    <p class="information" id="info5" style="display:none"> 
+        In this study, we present a novel neural control architecture for gait adaptation and obstacle avoidance of a tailless gecko robot. The control architecture is based on a hierarchical modular structure, consisting of several neural layers and modules. The frst layer contains three sensory preprocessing modules which flter sensory noise and generate appropriate descending commands to activate corresponding behaviors through the second and third layers. The second and third layers contain a central pattern generator (CPG) module and CPG postprocessing modules, respectively. The CPG module generates basic rhythmic locomotion patterns, shaped by the CPG postprocessing modules to achieve diﬀerent gaits (i.e., wave, intermediate, and trot) as well as different climbing directions (i.e., forward and sideways). We use a body inclination sensor to adapt the robot gait while climbing on diﬀerent slope angles, with infrared sensors to detect an obstacle on its climbing path and activate obstacle avoidance behavior. We successfully tested our control approach on a real tailless gecko robot. As a result, the robot can efciently climb forward on diﬀerent slope angles (including 90°) and automatically adapt its climbing gait accordingly, to maximize climbing speed and ensure stability. It can also avoid an obstacle by changing its climbing direction from forward to sideways.
+        </p>
+
+    <p class="information" id="info6" style="display:none"> 
+        Geckos are highly adaptable creatures, able to scale a variety of slopes, including walls, and can change their gait depending on their environment. Roboticists have tried to implement this behaviour in gecko robots. So far, an open-loop controlled robot without a tail that uses only one specific gait can climb to a 50° slope. In this paper, we propose neural control that allows a gecko robot to climb to a 70° slope by generating different gaits for various slope angles. The control consists of three main components: a central pattern generator (CPG) for generating various rhythmic patterns, CPG post-processing for shaping the CPG signals, and a delay line for transmitting the shaped CPG signals to drive the legs of the gecko robot. The robot uses a body inclination sensor to provide sensory feedback for gait adaptation. When the incline is below 35°, the robot walks with a predefined fast trot gait. If the incline is increased, it will change its gait from the trot gait to an intermediate gait, followed by a slow wave gait, which is both the most stable and the slowest gait, for climbing the steepest slopes. Using this walking strategy, the robot can efficiently climb a variety of slopes using different gaits and can automatically adapt its gait to maximise speed while ensuring stability.
+        </p>
+
+
+
+
+  </div>
+
+  <script>
+        function clicked(main,maxindex) {
+          var x = document.getElementById("info"+main.toString());var y = document.getElementById("project"+main.toString());
+          if (x.style.display === "none") {
+            for (i = 1; i <= maxindex; i++) {
+              var ax = document.getElementById("info"+i.toString());var ay = document.getElementById("project"+i.toString());
+              ax.style.display = "none";ay.style.opacity = 0.3;ay.style.filter =  "blur(0.1vw)";
+            }
+            x.style.display = "inline-block";y.style.opacity = 1.0;y.style.filter =  "blur(0.0vw)";
+          } else {
+            x.style.display = "none";y.style.opacity = 0.3;y.style.filter =  "blur(0.1vw)";
+          }
+        }
+
+        function hover(main) {
+          var x = document.getElementById("info"+main.toString());var y = document.getElementById("project"+main.toString());
+          if (x.style.display === "none"){
+            y.style.opacity = 0.6;
+            y.style.filter = "blur(0.0vw)";
+          }
+          
+        }
+
+        function over(main) {
+          var x = document.getElementById("info"+main.toString());var y = document.getElementById("project"+main.toString());
+          if (x.style.display === "none"){
+            y.style.opacity = 0.3;
+            y.style.filter = "blur(0.1vw)";
+          }
+        }
+  </script>
+
+  <div class="smallcol">
+    <center> <img src="pictures/me.png" width="90%" style="margin-top: 4mm;"> </center>
+    <center> 
+      <b style="font-size: 1.8vw; margin-bottom: 1vw"> <span style="color: #29648A">Arthicha Srisuchinnawong</span></b>
+      <p style="font-size:1.2vw;margin-top: 1vw;padding-left:2.0vw;padding-right:2.0vw;margin-bottom: 0vw"> <img src="pictures/icons/address.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : Vidyasirimedhi Institute of Science and Technology (VISTEC), Wangchan Valley, 555 Moo 1 Payupnai, Wangchan, Rayong, Thailand</p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw;margin-bottom: 1vw"> <img src="pictures/icons/tel.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : (+66) 875751549</p>
+
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/gmail.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : zumoarthicha@gmail.com</p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/gmail.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : arthicha.zumo@mail.kmutt.ac.th</p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/outlook.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : arthichas_pro@vistec.ac.th</p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/line.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : arthicha_s</p>
+
+      <p style="font-size:1.2vw;margin-top: 1vw;padding-left:1.0vw"> <a href="https://github.com/Arthicha" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/github.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : GitHub</a></p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <a href="https://www.researchgate.net/profile/Arthicha_Srisuchinnawong" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/researchgate.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : ResearchGate</a></p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <a href="https://scholar.google.com/citations?user=tllpPXsAAAAJ&hl=en&oi=ao" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/googlescholar.png" height="20vw" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : GoogleScholar</a></p>
+    </center>
+  </div>
+
+
+
+
+
+</div>
+</html>
