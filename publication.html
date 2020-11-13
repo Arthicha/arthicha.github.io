@@ -88,8 +88,28 @@ p.paragraph {
   <a href="#" style="text-decoration: none"> <b>EXPERIENCE</b></a> 
   <a href="publication.html" style="text-decoration: none"> <b>PUBLICATIONS</b></a> 
   <a href="project.html" style="text-decoration: none"> <b>PROJECT</b></a> 
+  <a href="#" style="text-decoration: none"> <b>NEWS</b></a> 
 </div>
-<img src="pictures/cover.png" width="100%" style="display:block;height:30vw">
+<img src="pictures/cover/cover0.png" id="slider" style="display:block;height:30vw;width:100%;opacity:75%;"> </img>
+<script>
+
+    var images = new Array ("cover0.png","cover1.png")
+    var image_count = Math.floor(Math.random() * 2);
+
+    function rollover (image_id, millisecs) {
+      var image = document.getElementById(image_id);
+      image.src = "pictures/cover/"+images[image_count];
+      image_count++;
+      if (image_count >= images.length) {
+        image_count = 0;
+      }
+      setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
+    }
+
+    rollover("slider",10000);
+
+</script>
+ 
  <div style="background-color: #464866;width: 100%;overflow: auto;height=4mm"> 
   <p style="color:#464866;font-size:0.5vw"> Hi</p>
  </div> 
@@ -133,7 +153,7 @@ p.paragraph {
     </b> </div>
     <br>
     <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
-        <li> <p class="paragraph">Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2020) <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, Journal of Intelligent and Robotic Systems (JINT). (under revision) <button onclick="journal1()" class="button">abstract</button> </p></li>
+        <li> <p class="paragraph">Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2020) <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, Journal of Intelligent and Robotic Systems (JINT), accepted. <button onclick="journal1()" class="button">abstract</button> </p></li>
         <p class="paragraph" id="journal1" style="display:none;margin-left:2vw;margin-right:4vw;color:#644866"> <i>
         In this study, we present a novel neural control architecture for gait adaptation and obstacle avoidance of a tailless gecko robot. The control architecture is based on a hierarchical modular structure, consisting of several neural layers and modules. The frst layer contains three sensory preprocessing modules which flter sensory noise and generate appropriate descending commands to activate corresponding behaviors through the second and third layers. The second and third layers contain a central pattern generator (CPG) module and CPG postprocessing modules, respectively. The CPG module generates basic rhythmic locomotion patterns, shaped by the CPG postprocessing modules to achieve diﬀerent gaits (i.e., wave, intermediate, and trot) as well as different climbing directions (i.e., forward and sideways). We use a body inclination sensor to adapt the robot gait while climbing on diﬀerent slope angles, with infrared sensors to detect an obstacle on its climbing path and activate obstacle avoidance behavior. We successfully tested our control approach on a real tailless gecko robot. As a result, the robot can efciently climb forward on diﬀerent slope angles (including 90°) and automatically adapt its climbing gait accordingly, to maximize climbing speed and ensure stability. It can also avoid an obstacle by changing its climbing direction from forward to sideways.
         </i></p>

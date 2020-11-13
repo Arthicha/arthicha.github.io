@@ -81,8 +81,28 @@ p.paragraph {
   <a href="#" style="text-decoration: none"> <b>EXPERIENCE</b></a> 
   <a href="publication.html" style="text-decoration: none"> <b>PUBLICATIONS</b></a> 
   <a href="project.html" style="text-decoration: none"> <b>PROJECT</b></a> 
+  <a href="#" style="text-decoration: none"> <b>NEWS</b></a> 
 </div>
-<img src="pictures/cover.png" width="100%" style="display:block;height:30vw">
+<img src="pictures/cover/cover0.png" id="slider" style="display:block;height:30vw;width:100%;opacity:75%;"> </img>
+<script>
+
+    var images = new Array ("cover0.png","cover1.png")
+    var image_count = Math.floor(Math.random() * 2); ;
+
+    function rollover (image_id, millisecs) {
+      var image = document.getElementById(image_id);
+      image.src = "pictures/cover/"+images[image_count];
+      image_count++;
+      if (image_count >= images.length) {
+        image_count = 0;
+      }
+      setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
+    }
+
+    rollover("slider",10000);
+
+</script>
+ 
  <div style="background-color: #464866;width: 100%;overflow: auto;height=4mm"> 
   <p style="color:#464866;font-size:0.5vw"> Hi</p>
  </div> 
