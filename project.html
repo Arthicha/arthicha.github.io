@@ -148,6 +148,14 @@ p.heading {
         background-image: url("img/slide0.jpg");
         background-size: cover;
     }
+
+.caption {
+  margin-top: 1.1vw;
+  margin-bottom: 1.1vw;
+  font-size:1.1vw;
+  font-style: italic;
+}
+
 </style>
 
 
@@ -249,12 +257,42 @@ p.heading {
 
     <div id="info3" class="information" style="display:none;"> 
       <p class="heading"> <b> Drawing Bot </b></p>
+
       <p class="information"> 
-        Demonstration
-        </p> 
+        Drawing Bot was built by me and my team in 2017 with our expertise in mechanical design, embedded system, control theory, image processing, and machine learning. The robot's goal is to copy, sketch, and paint the picture shown beforehand. If the picture contains more than one color, it is drawn with the corresponding color pens. In December 2017, Drawing Bot was exhibited in the International Robotics Exhibitions at the Thailand Robotics Week 2017.
+
         <center>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/7Bu3LbkdVA8?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7Bu3LbkdVA8&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
+        <p class="caption">Video: Drawing Bot drawing a picture of me and my team.</p>
+        </center>
+
+      </p>
+
+      <p class="information"> 
+        The robot consists of three main components: hardware, low-level control, and high-level control. Regarding the first components, Drawing Bot is a cartesian robot. The horizontal movement is controlled by two sets of a lead screw and a DC motor with an encoder. The vertical movement is controlled by another DC motor, limit switches, and a rack, to which a 3d-printed gripper is mounted. Inspired by hand, the gripper contains a servo motor connecting to two four-bar linkage mechanisms: the robot's thumb, holding the pen along the lateral direction, and the robot's index, holding the pen along the front. In total, the robot costs 15,000 THB.
+
+        <center>
+          <figure>
+            <img src="pictures/project/drawingbot_structure.png" width="640" height="360">
+            <p class="caption">Figure: Drawing Bot.</p>
+          </figure>
+        </center>
+      </p>
+
+      <p class="information"> 
+        Turning to low-level control, an embedded controller based on a PIC24 chip is employed. It serves as the PID controller, handling under the interrupt service routine. Additionally, the anti-windup technique is implemented to deal with control input saturation. The target and the state of the robot are from a PC acting as the high-level controller through wired communication.  
+      </p>
+
+      <p class="information"> 
+        After the image is captured, K-mean clustering divides the pixels into three groups, the centroids of which are compared with the pen color to deal with multi-color images. The algorithm subsequently extracts lines from contours, edges, and shading regions before the lines are combined to the TCP trajectory of image coordinates. A polynomial regression model, trained with a calibration sheet, then converts the trajectory into world coordinates; and they are encoded to high-level protocol later on.
+        <center>
+          <figure>
+            <img src="pictures/project/drawingbot_trajectory.png" width="280" height="360">
+            <p class="caption">Figure: Visualization of The Trajectory.</p>
+          </figure>
+        </center>
+      </p>
+
 
     <p class="information" style="margin-bottom: 3vw"> </p>
     </div>
