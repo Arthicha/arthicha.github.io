@@ -364,11 +364,13 @@ i.year {
     <h2 class="projectname" style="top:68vw;left: 12.265vw;" id="name4"> Ravana <br> the Animatronic Robot </h2>
     <img class = "projectimg" id="project4" src="pictures/project/ravana_cover.png" onclick="clicked(4,6)" onmouseover="hover(4)" onmouseout="over(4)"> </img>
 
-      <h2 class="projectname" style="top:68vw;left: 36.795vw;" id="name5"> Learning Locomotion </h2>
-      <img class="projectimg" id="project5" src="pictures/project/rbppo_cover.png" onclick="clicked(5,6)" onmouseover="hover(5)" onmouseout="over(5)"> 
+    <h2 class="projectname" style="top:68vw;left: 36.795vw;" id="name6"> Model-Based <br> Reinforcement Learning </h2>
+      <img class="projectimg" id="project6" src="pictures/project/modelbased_cover.png" onclick="clicked(5,6)" onmouseover="hover(5)" onmouseout="over(5)"> 
 
-      <h2 class="projectname" style="top:68vw;left: 61.325vw;" id="name6"> Model-Based <br> Reinforcement Learning </h2>
-      <img class="projectimg" id="project6" src="pictures/project/modelbased_cover.png" onclick="clicked(6,6)" onmouseover="hover(6)" onmouseout="over(6)"> 
+      <h2 class="projectname" style="top:68vw;left: 61.325vw;" id="name5"> Learning Locomotion </h2>
+      <img class="projectimg" id="project5" src="pictures/project/rbppo_cover.png" onclick="clicked(6,6)" onmouseover="hover(6)" onmouseout="over(6)"> 
+
+      
     
    
    <div id="info4" class="information" style="display:none;"> 
@@ -377,7 +379,52 @@ i.year {
         coming soon . . .
         </p> </div>
 
+
+
     <div id="info5" class="information" style="display:none;"> 
+      <p class="heading"> <b> Model-Based Reinforcement Learning </b> <i class="year"> (2019) </i> </p>
+
+       <p class="information"> 
+        Model-free reinforcement learning (RL) is a popular learning technique in robotics; however, it requires a long learning time. <a href="https://arxiv.org/abs/1708.02596" style="text-decoration: none;"> Model-based RL</a> is an alternative method to accelerate and constrain learning. With this method, the internal model of the system is learned along with the sequence of actions is optimized for a high reward.
+        <center>
+        <figure>
+            <img src="pictures/project/modelbased_overview.PNG" width="640" height="500">
+          </figure>
+        <p class="caption">Figure: Overview of the model-based reinforcement learning used here.</p>
+        </center>
+      </p>
+
+      <p class="information"> 
+        Instead of using a neural network to approximate the system dynamics, the tensor equations are derived based on the fourth-order <a href="https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods" style="text-decoration: none;"> Runge-Kutta method (RK4)</a> to speed up the process further. A constrained optimization, named <a href="https://en.wikipedia.org/wiki/Sequential_quadratic_programming" style="text-decoration: none;"> sequential quadratic programming (SQP)</a>, subsequentially optimizes the actions/control inputs for the highest reward in a given time horizon. Throughout the process, the parameters of the tensor equations are adapted using a gradient-based approach such that the internal dynamic model matches the system dynamics. 
+      </p>
+      <b class="subheading"> Results </b>
+      <p class="information"> 
+        Three dynamical systems were employed for the study: an inverted pendulum, an acrobot, and a compass gait. The inverted pendulum has one active sliding joint (the cart), and the goal is to swing the pole (green ball) to the upright position. The Acrobot also share the same objective, but the active joint is the revolute joint between two links. Finally, the task of the compass gait is to walk forward as fast as it can without falling down. 
+        </p> 
+
+      <p class="information"> 
+        
+        <center>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/RLEyvARsUbc?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=RLEyvARsUbc&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <p class="caption">Video: The inverted pendulum.</p>
+        </center>
+
+        <center>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/7LDrV0sKHgk?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7LDrV0sKHgk&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <p class="caption">Video: The Acrobot.</p>
+        </center>
+
+
+        <center>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/L1HZXZxPtp4?start=2&;end=10&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=L1HZXZxPtp4&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <p class="caption">Video: The compass gait.</p>
+        </center>
+      </p> 
+      <p class="information" style="margin-bottom: 3vw"> </p>
+      </div>
+    </div>
+
+    <div id="info6" class="information" style="display:none;"> 
       <p class="heading"> <b> Learning Locomotion </b></p>
       <p class="information"> 
         Learned Policies
@@ -389,33 +436,6 @@ i.year {
     <p class="information" style="margin-bottom: 3vw"> </p>
     </div>
 
-    <div id="info6" class="information" style="display:none;"> 
-      <p class="heading"> <b> Model-Based Reinforcement Learning </b></p>
-      <p class="information"> 
-        Dynamical System 1: Inverted Pendulum
-        </p> 
-        <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/RLEyvARsUbc?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=RLEyvARsUbc&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
-
-      <p class="information"> 
-        Dynamical System 2: Acrobot
-        </p> 
-        <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/7LDrV0sKHgk?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7LDrV0sKHgk&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
-
-
-      <p class="information"> 
-        Dynamical System 3: Compass Gait
-        </p> 
-        <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/L1HZXZxPtp4?start=2&;end=10&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=L1HZXZxPtp4&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
-
-      <p class="information" style="margin-bottom: 3vw"> </p>
-      </div>
-    </div>
 
   </div>
 
