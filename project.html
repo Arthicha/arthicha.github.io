@@ -425,13 +425,36 @@ i.year {
     </div>
 
     <div id="info6" class="information" style="display:none;"> 
-      <p class="heading"> <b> Learning Locomotion </b></p>
+      <p class="heading"> <b> Learning Locomotion </b>  <i class="year"> (2019) </i> </p>
+
       <p class="information"> 
-        Learned Policies
-        </p> 
+        Dynamic models of multi-joint legged robots are difficult to obtain, so they are hard to control as well. Reinforcement learning (RL) allows training a neural network that maps observations directly to actions and produces successful locomotion.
         <center>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/SOISIxcmLSY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=SOISIxcmLSY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
+        <p class="caption">Video: Learning locomotion.</p>
+        </center>
+      </p>
+
+      <p class="information"> 
+        Proximal Policy Optimization (PPO) is one RL method that commonly leads to good results with a high reward. One variance of PPO utilizes KL divergence to limit the change of the network parameters and prevent falling-off-a-cliff. However, some sets of the hyperparameters may result in being stuck at local optima, as shown in the figure below. When this happens, the robot receives constant rewards and believes that it has selected the optimal actions, which actually is not. 
+        <center>
+        <figure><img src="pictures/project/rbppo_local1.gif" width="320" height="250">
+          <img src="pictures/project/rbppo_local2.gif" width="320" height="250">
+          </figure>
+        <p class="caption">Figure: The walker gets stuck at local optima.</p>
+        </center>
+      </p>
+
+      <p class="information"> 
+        To deal with the problem, I proposed the concept of reward-based PPO. The idea behind this is to relax the constraint when the reward remains stable and strengthen the constrain when the reward significantly changes. With this technique, I found that using a set of hyperparameter (&alpha; = 0.10 and &tau; = 0.4) could provide good results without being stuck in local optima for all the robots tested. The locomotion of the trained robots are presented in the first video. 
+        <center>
+        <figure>
+          <img src="pictures/project/rbppo_result.PNG" width="640" height="400">
+          </figure>
+        <p class="caption">Table: Rewards obtained from the neural networks trained with KL divergence based and reward-based PPO with different hyperparameters.</p>
+        </center>
+      </p>
+
 
     <p class="information" style="margin-bottom: 3vw"> </p>
     </div>
