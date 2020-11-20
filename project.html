@@ -241,10 +241,37 @@ i.year {
    
    <div id="info1" class="information" style="display:none;"> 
 
-        <p class="heading"> <b> Neural Control for Gecko Robots </b></p>
+        <p class="heading"> <b> Neural Control for Gecko Robots </b> <i class="year"> (2018-2020) </i> </p>
         <p class="information"> 
-        coming soon . . .
-        </p> </div>
+        Gecko is an interesting animal that is well-known for its ability to climb walls even without its tail. People have taken gecko as inspiration for many things including climbing robots. In 2018, I got introduced to an adhesive material, which I call gecko tape, and I installed it at the robot feet. From 2018 to 2020, my colleagues and I have developed three versions of tailless gecko robots and the neural control for each to study locomotion with gait adaptation, obstacle avoidance, and leg posture adaptation. 
+        </p> 
+
+        <b class="subheading"> Locomotion with Gait Adaptation </b>
+        <p class="information"> 
+          A basic neural locomotion control for generating different gaits was implemented on the gecko robot. From the preliminary experiment, each gait had its characteristics. For example, the trot gait is fast, but the robot with the trot gait always slips and falls on steep slopes. The wave gait, on the other hand, is slow but is more stable. Therefore, we used the pitch angle as the feedback to determine the robot's gait and proposed the gecko robot with gait adaptation. With this strategy, the robot can translate to a suitable gait autonomously by reducing the speed to gain more stability when climbing steep slopes. Details of this work is in <a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none;">the paper</a>.
+          <center>
+          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+            <source src="http://www.manoonpong.com/ICAR2019/video.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Video: The gecko robot climbing with adaptable gait a changing slope.</p>
+          </center>
+        </p>
+
+        <b class="subheading"> Locomotion on Vertical Surfaces and Obstacle Avoidance </b>
+        <p class="information"> 
+          Extending from our previous work, my colleagues and I designed a new gecko robot and developed more advanced neural locomotion control. In 2020, we have presented the first tailless gecko robot that is able to climb vertical surfaces and avoid obstacles by climbing sideways. Up to that time, climbing a vertical surface had not been reported by any tailless gecko robots; additionally, the previously developed gecko robots could only climb forward.  
+          <center>
+          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+            <source src="http://www.manoonpong.com/JINT/video1.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Video: The gecko robot with adaptable gait climbing a changing slope upto 90 degree.</p>
+          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+            <source src="http://www.manoonpong.com/JINT/video2.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Video: The gecko robot climbing sideways to avoid the obstacles locating on its path.</p>
+          </center>
+        </p>
+    </div>
 
     <div id="info2" class="information" style="display:none;"> 
       <p class="heading"> <b> Robot Arm for Advanced Pick-and-Place </b> <i class="year"> (2018) </i> </p>
