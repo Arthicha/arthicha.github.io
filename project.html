@@ -167,6 +167,12 @@ b.subheading {
   font-style: italic;
 }
 
+i.year {
+  font-size:1.2vw;
+  color: #29648A;
+  font-weight: bolder;
+}
+
 </style>
 
 
@@ -241,33 +247,66 @@ b.subheading {
         </p> </div>
 
     <div id="info2" class="information" style="display:none;"> 
-      <p class="heading"> <b> Robot Arm for Advanced Pick-and-Place </b></p>
-      <p class="information"> 
-        Words Recognition
-        </p> 
-        <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/8SWfL4L6MHo?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=8SWfL4L6MHo&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
+      <p class="heading"> <b> Robot Arm for Advanced Pick-and-Place </b> <i class="year"> (2018) </i> </p>
 
       <p class="information"> 
-        Inverse Kinematics
-        </p> 
+        With a team of ten, we built an intelligent robot arm integrated with vision-based machine learning for advanced pick-and-place. The robot's tasks are twofold. First, the robot detects nameplates locating on the sidewalls and floor, and it picks them. Next, it attaches all the plates to the front wall in the correct order according to the labels.
+
+        <center>
+        <figure>
+            <img src="pictures/project/module89_team.png" width="600" height="400">
+            <p class="caption">Figure: The robot arm for advanced pick-and-place.</p>
+          </figure>
+        </center>
+      </p>
+      <b class="subheading"> Hardware </b>
+      <p class="information"> 
+        The robot is a 6-DOF articulated robot arm with a pneumatic gripper attached to its spherical wrist. It was created from scratch with a budget of 30,000 THB. The high-level controller is a computer, while the low-level PID controller is an STM32 microcontroller. 
+      </p>
+
+      <b class="subheading"> Robot Control </b>
+      <p class="information"> 
+        Due to the non-standard robot configuration, we had to solve inverse kinamatics by ourselves, and we did this via geometry approach and kinematic decoupling. The simulation used to validate the inverse kinamatic equation is shown below. Another challange in robot control is path planing since the robot should avoid hitting the walls and itself. Consequently, we employed pottential field as our path planing algorithm. 
         <center>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/71FU94bBjBs?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=71FU94bBjBs&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
+        <p class="caption">Video: The simulation used to validate the inverse kinamatic equation.</p>
+        </center>
+      </p>
 
+      <b class="subheading"> Robot Vision </b>
       <p class="information"> 
-        Demonstration
-        </p> 
+
+        The robot interprets the labels by using an ensemble machine learning, where the probabilistic output vectors of three models (convolutional neural network (CNN), random forest (RF), and k-nearest neighbor (KNN)) are averaged. Dealing with data hungry deep learning, the models were trained on an enormous pool of synthetic data generated from font scraping. However, the performance of the model on captured labels is not good without applying an edge detector and skeletonizaition to all the images, as presented in the table below (more details can be seen from <a href="https://ieeexplore.ieee.org/abstract/document/8712759" style="text-decoration: none;"> the paper</a>). At last, the classification is robust enough to correctly classify the labels with complex fonts and the handwritten ones as shown in the video below. 
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/y-yY0PuGL6Y?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=y-yY0PuGL6Y&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
-      </center>
+          <figure>
+            <img src="pictures/project/module89_transfer.png" width="700" height="200">
+            <p class="caption">Table: The F1-score of the classification.</p>
+          </figure>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/8SWfL4L6MHo?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=8SWfL4L6MHo&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <p class="caption">Video: The demonstration of the classification.</p>
+        </center>
+      </p>
+
+
+    <b class="subheading"> Demonstration </b>
+
+    <p class="information" style="margin-bottom: 3vw"> </p>
+    <p class="information"> 
+        <center>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/y-yY0PuGL6Y?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=y-yY0PuGL6Y&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
+          <p class="caption">Video: Demonstration.</p>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/lX-O7UcXecY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=lX-O7UcXecY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
+          <p class="caption">Video: Demonstration.</p>
+        </center>
+      </p>
+
+
 
       <p class="information" style="margin-bottom: 3vw"> </p>
       </div>
 
     <div id="info3" class="information" style="display:none;"> 
-      <p class="heading"> <b> Drawing Bot </b></p>
+      <p class="heading"> <b> Drawing Bot </b> <i class="year"> (2017) </i>  </p>
 
 
       <p class="information"> 
