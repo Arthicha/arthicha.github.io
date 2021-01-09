@@ -50,8 +50,10 @@
 }
 
 .wrapper {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 .smallcol {
@@ -65,13 +67,16 @@
  }
 
 .maincol {
-    width:74%;
-    height:500.0vh;
+    /*width:74%;*/
+    width:75vw;
+    height:450.0vh;
     float: left;
    background-color:white;
    border-right: 1px solid black;
    line-height: 0vw;
    overflow: auto;
+   padding: 0 0 0 0;
+    margin: 0 0 0 0;
  }
 
 p.paragraph {
@@ -86,17 +91,19 @@ p.paragraph {
 .projectimg {
   display: inline-block;
   opacity: 0.3;
-  height:18vw;
-  width:24.3vw;
-  padding: 0 0;
-  margin: 0 0;
-  float: left;
+  /*width:24.3vw;*/
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  float: center;
   line-height: 0vw;
   transition: all 0.3s ease;
   filter: blur(0.1vw);
   font-size: 0vw;
   cursor: pointer;
   border: none;
+  position: relative;
+  top:0vw;left: 0vw;
+  width:25vw;height:18vw
 }
 
 
@@ -173,6 +180,10 @@ i.year {
   font-weight: bolder;
 }
 
+.fadedblack {
+  background: rgba(0,0,0,0.8);float:center;padding: 0 0 0 0; margin: 0 0 0 0;display:flex;
+}
+
 </style>
 
 
@@ -213,57 +224,56 @@ i.year {
   <p style="color:#464866;font-size:0.5vw"> Hi</p>
  </div> 
 
-<div class="wrapper">
+<div class="wrapper"> <!------------------------ page ------------------------------------->
+  <div class="maincol"> <!------------------------ main column ------------------------------------->
+    
+    <!------------------------ heading ------------------------------------->
+    <br><div> <b><span style="color: #29648A;font-size:2.4vw;margin-left:2vw;line-height: 4.8vw;">Projects</span></b> </div><br>
 
-  <div class="maincol">
-    <br>
-    <div > <b>
-      <span style="color: #29648A;font-size:2.4vw;margin-left:2vw;line-height: 4.8vw;">Projects</span>
-    </b> </div>
-    <br>
+    <!------------------------ overall description ------------------------------------->
     <p class="paragraph" style="margin-left:2vw;margin-bottom: 2vw"> These are some of my projects. Click the images for more details. </p> 
 
-    <div style="background: rgba(0,0,0,0.8);float:left;">
 
+    <div class="fadedblack"> <!------------------------ projects row 1 ------------------------------------->
+      <h2 class="projectname" style="top:50vw;left: 12.265vw;" id="name1"> Worm-Inspired Robot </h2>
+      <img class = "projectimg" style= "top:0vw;left: 0vw;" id="project1" src="pictures/project/avis_cover.png" onclick="clicked(1)" onmouseover="hover(1)" onmouseout="over(1)"> </img>
 
-
-
-    <h2 class="projectname" style="top:50vw;left: 12.265vw;" id="name1"> Worm-Inspired Robot </h2>
-    <img class = "projectimg" id="project1" src="pictures/project/avis_cover.png" onclick="clicked(1)" onmouseover="hover(1)" onmouseout="over(1)"> </img>
-
-    <h2 class="projectname" style="top:50vw;left: 36.795vw;" id="name2"> NeuroVis </h2>
-    <img class="projectimg" id="project2" src="pictures/project/neurovis_cover.png" onclick="clicked(2)" onmouseover="hover(2)" onmouseout="over(2)" > </img>
+      <h2 class="projectname" style="top:50vw;left: 36.795vw;" id="name2"> NeuroVis </h2>
+      <img class="projectimg" style= "top:0vw;left: 0%;" id="project2" src="pictures/project/neurovis_cover.png" onclick="clicked(2)" onmouseover="hover(2)" onmouseout="over(2)" > </img>
+      
+      <h2 class="projectname" style="top:50vw;left: 61.325vw;" id="name3"> Neural Control for <br> Gecko Robots </h2>
+      <img class="projectimg" style= "top:0vw;left: 0%;" id="project3" src="pictures/project/geckorobot_cover.png" onclick="clicked(3)" onmouseover="hover(3)" onmouseout="over(3)" >  </img>
+    </div> <!------------------------ <end> projects row 1 ------------------------------------->
     
-    <h2 class="projectname" style="top:50vw;left: 61.325vw;" id="name3"> Neural Control for <br> Gecko Robots </h2>
-    <img class="projectimg" id="project3" src="pictures/project/geckorobot_cover.png" onclick="clicked(3)" onmouseover="hover(3)" onmouseout="over(3)" >  </img>
-  
-    
-   
-   <div id="info1" class="information" style="display:none;"> 
-    <p class="heading"> <b> Worm-Inspired Robot </b> <i class="year"> (2020-2021) </i></p>
-    <p class="information"> 
+   <!------------------------ information row 1/1 ------------------------------------->
+    <div id="info1" class="information" style="display:none;"> 
+      <p class="heading"> <b> Worm-Inspired Robot </b> <i class="year"> (2020-2021) </i></p>
+      <p class="information"> 
         coming soon . . .
-        </p>
-        
+      </p>
     </div>
+    <!------------------------ <end> information row 1/1 ------------------------------------->
 
+    <!------------------------ information row 1/2 ------------------------------------->
     <div id="info2" class="information" style="display:none;"> 
       <p class="heading"> <b> NeuroVis - neuro visualization <i class="year"> (2020-2021) </i> </b></p>
-    <p class="information"> 
+      <p class="information"> 
         coming soon . . .
-        </p>
-      </div>
+      </p>
+    </div>
+    <!------------------------ <end> information row 1/2 ------------------------------------->
 
+    <!------------------------ information row 1/3 ------------------------------------->
     <div id="info3" class="information" style="display:none;"> 
       <p class="heading"> <b> Neural Control for Gecko Robots </b> <i class="year"> (2018-2020) </i> </p>
-        <p class="information"> 
+      <p class="information"> 
         Gecko is an interesting animal that is well-known for its ability to climb walls even without its tail. People have taken gecko as inspiration for many things including climbing robots. In 2018, I got introduced to an adhesive material, which I call gecko tape, and I installed it at the robot feet. From 2018 to 2020, my colleagues and I have developed three versions of tailless gecko robots and the neural control for each to study locomotion with gait adaptation, obstacle avoidance, and leg posture adaptation. 
-        </p> 
+      </p> 
 
-        <b class="subheading"> Locomotion with Gait Adaptation </b>
-        <p class="information"> 
-          A basic neural locomotion control for generating different gaits was implemented on the gecko robot. From the preliminary experiment, each gait had its characteristics. For example, the trot gait is fast, but the robot with the trot gait always slips and falls on steep slopes. The wave gait, on the other hand, is slow but is more stable. Therefore, we used the pitch angle as the feedback to determine the robot's gait and proposed the gecko robot with gait adaptation. With this strategy, the robot can translate to a suitable gait autonomously by reducing the speed to gain more stability when climbing steep slopes. Details of this work is in <a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none;">the paper</a>.
-          <center>
+      <b class="subheading"> Locomotion with Gait Adaptation </b>
+      <p class="information"> 
+        A basic neural locomotion control for generating different gaits was implemented on the gecko robot. From the preliminary experiment, each gait had its characteristics. For example, the trot gait is fast, but the robot with the trot gait always slips and falls on steep slopes. The wave gait, on the other hand, is slow but is more stable. Therefore, we used the pitch angle as the feedback to determine the robot's gait and proposed the gecko robot with gait adaptation. With this strategy, the robot can translate to a suitable gait autonomously by reducing the speed to gain more stability when climbing steep slopes. Details of this work is in <a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none;">the paper</a>.
+        <center>
           <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
             <source src="http://www.manoonpong.com/ICAR2019/video.mp4" type="video/mp4">
           </video>
@@ -271,45 +281,48 @@ i.year {
           </center>
         </p>
 
-        <b class="subheading"> Locomotion on Vertical Surfaces and Obstacle Avoidance </b>
-        <p class="information"> 
-          Extending from our previous work, my colleagues and I designed a new gecko robot and developed more advanced neural locomotion control. In 2020, we have presented the first tailless gecko robot that is able to climb vertical surfaces and avoid obstacles by climbing sideways. Up to that time, climbing a vertical surface had not been reported by any tailless gecko robots; additionally, the previously developed gecko robots could only climb forward.  
-          <center>
-          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
-            <source src="http://www.manoonpong.com/JINT/video1.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Video: The gecko robot with adaptable gait climbing a changing slope upto 90 degree.</p>
-          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
-            <source src="http://www.manoonpong.com/JINT/video2.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Video: The gecko robot climbing sideways to avoid the obstacles locating on its path.</p>
-          </center>
-        </p>
+      <b class="subheading"> Locomotion on Vertical Surfaces and Obstacle Avoidance </b>
+      <p class="information"> 
+        Extending from our previous work, my colleagues and I designed a new gecko robot and developed more advanced neural locomotion control. In 2020, we have presented the first tailless gecko robot that is able to climb vertical surfaces and avoid obstacles by climbing sideways. Up to that time, climbing a vertical surface had not been reported by any tailless gecko robots; additionally, the previously developed gecko robots could only climb forward.  
+        <center>
+        <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+        <source src="http://www.manoonpong.com/JINT/video1.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Video: The gecko robot with adaptable gait climbing a changing slope upto 90 degree.</p>
+        <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+        <source src="http://www.manoonpong.com/JINT/video2.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Video: The gecko robot climbing sideways to avoid the obstacles locating on its path.</p>
+        </center>
+      </p>
     </div>
+    <!------------------------ <end> information row 1/3 ------------------------------------->
 
-    <h2 class="projectname" style="top:68vw;left: 12.265vw;" id="name4"> Robot Arm for <br> Advanced <br> Pick-and-Place </h2>
-    <img class = "projectimg" id="project4" src="pictures/project/module89_cover.png" onclick="clicked(4)" onmouseover="hover(4)" onmouseout="over(4)"> </img>
+    <div class="fadedblack"> <!------------------------ projects row 2 ------------------------------------->
+      <h2 class="projectname" style="top:68vw;left: 12.265vw;" id="name4"> Robot Arm for <br> Advanced <br> Pick-and-Place </h2>
+      <img class = "projectimg" id="project4" src="pictures/project/module89_cover.png" onclick="clicked(4)" onmouseover="hover(4)" onmouseout="over(4)"> </img>
 
-    <h2 class="projectname" style="top:68vw;left: 36.795vw;" id="name5"> Drawing Bot </h2>
+      <h2 class="projectname" style="top:68vw;left: 36.795vw;" id="name5"> Drawing Bot </h2>
       <img class="projectimg" id="project5" src="pictures/project/drawingbot_cover.png" onclick="clicked(5)" onmouseover="hover(5)" onmouseout="over(5)"> 
 
       <h2 class="projectname" style="top:68vw;left: 61.325vw;" id="name6"> Ravana <br> the Animatronic Robot </h2>
-      <img class="projectimg" id="project6" src="pictures/project/ravana_cover.png" onclick="clicked(6)" onmouseover="hover(6)" onmouseout="over(6)"> 
-
+      <img class="projectimg" id="project6" src="pictures/project/ravana_cover.png" onclick="clicked(6)" onmouseover="hover(6)" onmouseout="over(6)">
+    </div>
+    <!------------------------ <end> projects row 2 ------------------------------------->
     
-      <div id="info4" class="information" style="display:none;"> 
-    <p class="heading"> <b> Robot Arm for Advanced Pick-and-Place </b> <i class="year"> (2018) </i> </p>
-
+    <!------------------------ infomation row 2/1 ------------------------------------->
+    <div id="info4" class="information" style="display:none;"> 
+      <p class="heading"> <b> Robot Arm for Advanced Pick-and-Place </b> <i class="year"> (2018) </i> </p>
       <p class="information"> 
         With a team of ten, we built an intelligent robot arm integrated with vision-based machine learning for advanced pick-and-place. The robot's tasks are twofold. First, the robot detects nameplates locating on the sidewalls and floor, and it picks them. Next, it attaches all the plates to the front wall in the correct order according to the labels.
-
         <center>
         <figure>
-            <img src="pictures/project/module89_team.png" width="600" height="400">
-            <p class="caption">Figure: The robot arm for advanced pick-and-place.</p>
-          </figure>
+        <img src="pictures/project/module89_team.png" width="600" height="400">
+        <p class="caption">Figure: The robot arm for advanced pick-and-place.</p>
+        </figure>
         </center>
       </p>
+      
       <b class="subheading"> Hardware </b>
       <p class="information"> 
         The robot is a 6-DOF articulated robot arm with a pneumatic gripper attached to its spherical wrist. It was created from scratch with a budget of 30,000 THB. The high-level controller is a computer, while the low-level PID controller is an STM32 microcontroller. 
@@ -329,20 +342,18 @@ i.year {
 
         The robot interprets the labels by using an ensemble machine learning, where the probabilistic output vectors of three models (convolutional neural network (CNN), random forest (RF), and k-nearest neighbor (KNN)) are averaged. Dealing with data hungry deep learning, the models were trained on an enormous pool of synthetic data generated from font scraping. However, the performance of the model on captured labels is not good without applying an edge detector and skeletonizaition to all the images, as presented in the table below (more details can be seen from <a href="https://ieeexplore.ieee.org/abstract/document/8712759" style="text-decoration: none;"> the paper</a>). At last, the classification is robust enough to correctly classify the labels with complex fonts and the handwritten ones as shown in the video below. 
         <center>
-          <figure>
-            <img src="pictures/project/module89_transfer.PNG" width="700" height="200">
-            <p class="caption">Table: The F1-score of the classification.</p>
-          </figure>
+        <figure>
+        <img src="pictures/project/module89_transfer.PNG" width="700" height="200">
+        <p class="caption">Table: The F1-score of the classification.</p>
+        </figure>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/8SWfL4L6MHo?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=8SWfL4L6MHo&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The demonstration of the classification.</p>
         </center>
       </p>
-
-
-    <b class="subheading"> Demonstration </b>
-
-    <p class="information" style="margin-bottom: 3vw"> </p>
-    <p class="information"> 
+      
+      <b class="subheading"> Demonstration </b>
+      <p class="information" style="margin-bottom: 3vw"> </p>
+      <p class="information"> 
         <center>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/y-yY0PuGL6Y?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=y-yY0PuGL6Y&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
           <p class="caption">Video: Demonstration.</p>
@@ -351,15 +362,14 @@ i.year {
         </center>
       </p>
 
-
-
       <p class="information" style="margin-bottom: 3vw"> </p>
     </div>
-
-        <div id="info5" class="information" style="display:none;"> 
-    <p class="heading"> <b> Drawing Bot </b> <i class="year"> (2017) </i>  </p>
+    <!------------------------ <end> infomation row 2/1 ------------------------------------->
 
 
+    <!------------------------ infomation row 2/2 ------------------------------------->
+    <div id="info5" class="information" style="display:none;"> 
+      <p class="heading"> <b> Drawing Bot </b> <i class="year"> (2017) </i>  </p>
       <p class="information"> 
         Drawing Bot was built by me and my team in 2017 with our expertise in mechanical design, embedded system, control theory, image processing, and machine learning. The robot's goal is to copy, sketch, and paint the picture shown beforehand. If the picture contains more than one color, it is drawn with the corresponding color pens. In December 2017, Drawing Bot was exhibited in the International Robotics Exhibitions at the Thailand Robotics Week 2017.
 
@@ -369,6 +379,7 @@ i.year {
         </center>
 
       </p>
+
       <b class="subheading"> Hardware </b>
       <p class="information"> 
         Drawing Bot is a cartesian robot. The horizontal movement is controlled by two sets of a lead screw and a DC motor with an encoder. The vertical movement is controlled by another DC motor, limit switches, and a rack, to which a 3d-printed gripper is mounted. Inspired by hand, the gripper contains a servo motor connecting to two four-bar linkage mechanisms: the robot's thumb, holding the pen along the lateral direction, and the robot's index, holding the pen along the front. In total, the robot costs 15,000 THB.
@@ -380,10 +391,12 @@ i.year {
           </figure>
         </center>
       </p>
+
       <b class="subheading"> Low-level control </b>
       <p class="information"> 
         An embedded controller based on a PIC24 chip is employed. It serves as the PID controller, handling under the interrupt service routine. Additionally, the anti-windup technique is implemented to deal with control input saturation. The target and the state of the robot are from a PC acting as the high-level controller through wired communication.  
       </p>
+
       <b class="subheading"> High-level control </b>
       <p class="information"> 
         After the image is captured, K-mean clustering divides the pixels into three groups, the centroids of which are compared with the pen color to deal with multi-color images. The algorithm subsequently extracts lines from contours, edges, and shading regions before the lines are combined to the TCP trajectory of image coordinates. A polynomial regression model, trained with a calibration sheet, then converts the trajectory into world coordinates; and they are encoded to high-level protocol later on.
@@ -396,8 +409,8 @@ i.year {
       </p>
       <b class="subheading"> Results </b>
 
-    <p class="information" style="margin-bottom: 3vw"> </p>
-    <p class="information"> 
+      <p class="information" style="margin-bottom: 3vw"> </p>
+      <p class="information"> 
         <center>
           <figure>
             <img src="pictures/project/drawingbot_result1.png" width="280" height="400">
@@ -411,28 +424,33 @@ i.year {
         </center>
       </p>
     </div>
+    <!------------------------ <end> infomation row 2/2 ------------------------------------->
 
-        <div id="info6" class="information" style="display:none;"> 
-    <p class="heading"> <b> Ravana - the Animatronic Robot </b> <i class="year"> (2016) </i></p>
-    <p class="information"> 
+    <!------------------------ infomation row 2/3 ------------------------------------->
+    <div id="info6" class="information" style="display:none;"> 
+      <p class="heading"> <b> Ravana - the Animatronic Robot </b> <i class="year"> (2016) </i></p>
+      <p class="information"> 
         coming soon . . .
-        </p> </div>
+      </p> 
+    </div>
+    <!------------------------ <end> infomation row 2/3 ------------------------------------->
 
 
+    <!------------------------ projects row 3 ------------------------------------->
+    <div class="fadedblack">
+      <h2 class="projectname" style="top:86vw;left: 12.265vw;" id="name7"> Model-Based <br> Reinforcement Learning </h2>
+      <img class = "projectimg" id="project7" src="pictures/project/modelbased_cover.png" onclick="clicked(7)" onmouseover="hover(7)" onmouseout="over(7)"> </img>
 
-
-    <h2 class="projectname" style="top:86vw;left: 12.265vw;" id="name7"> Model-Based <br> Reinforcement Learning </h2>
-    <img class = "projectimg" id="project7" src="pictures/project/modelbased_cover.png" onclick="clicked(7)" onmouseover="hover(7)" onmouseout="over(7)"> </img>
-
-    <h2 class="projectname" style="top:86vw;left: 36.795vw;" id="name8"> Learning Locomotion </h2>
+      <h2 class="projectname" style="top:86vw;left: 36.795vw;" id="name8"> Learning Locomotion </h2>
       <img class="projectimg" id="project8" src="pictures/project/rbppo_cover.png" onclick="clicked(8)" onmouseover="hover(8)" onmouseout="over(8)"> 
+    </div> 
+    <!------------------------ <end> projects row 3 -------------------------------------> 
 
-
-   
+   <!------------------------ information row 3/1 ------------------------------------->
    <div id="info7" class="information" style="display:none;"> 
-    <p class="heading"> <b> Model-Based Reinforcement Learning </b> <i class="year"> (2019) </i> </p>
-
-       <p class="information"> 
+      
+      <p class="heading"> <b> Model-Based Reinforcement Learning </b> <i class="year"> (2019) </i> </p>
+      <p class="information"> 
         Model-free reinforcement learning (RL) is a popular learning technique in robotics; however, it requires a long learning time. <a href="https://arxiv.org/abs/1708.02596" style="text-decoration: none;"> Model-based RL</a> is an alternative method to accelerate and constrain learning. With this method, the internal model of the system is learned along with the sequence of actions is optimized for a high reward.
         <center>
         <figure>
@@ -469,11 +487,11 @@ i.year {
         </center>
       </p> 
       <p class="information" style="margin-bottom: 3vw"> </p>
-      </div>
     </div>
+    <!------------------------ <end> information row 3/1 ------------------------------------->
 
 
-
+    <!------------------------ information row 3/2 ------------------------------------->
     <div id="info8" class="information" style="display:none;"> 
       <p class="heading"> <b> Learning Locomotion </b>  <i class="year"> (2019) </i> </p>
 
@@ -504,21 +522,20 @@ i.year {
         <p class="caption">Table: Rewards obtained from the neural networks trained with KL divergence based and reward-based PPO with different hyperparameters.</p>
         </center>
       </p>
+      <p class="information" style="margin-bottom: 3vw"> </p>
     </div>
+    <!------------------------ <end> information row 3/2 ------------------------------------->
+  </div> 
 
-    
-
-
-  </div>
 
   
 
-  <div class="smallcol">
+   <div class="smallcol">
     <center> <img src="pictures/me.png" width="90%" style="margin-top: 4mm;"> </center>
     <center> 
       <b style="font-size: 1.8vw; margin-bottom: 1vw"> <span style="color: #29648A">Arthicha Srisuchinnawong</span></b>
-      <p style="font-size:1.2vw;margin-top: 1vw;padding-left:2.0vw;padding-right:2.0vw;margin-bottom: 0vw"> <img src="pictures/icons/address.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : Vidyasirimedhi Institute of Science and Technology (VISTEC), Wangchan Valley, 555 Moo 1 Payupnai, Wangchan, Rayong, Thailand</p>
-      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw;margin-bottom: 1vw"> <img src="pictures/icons/tel.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : (+66) 875751549</p>
+      <p style="font-size:1.2vw;margin-top: 1vw;padding-left:2.0vw;padding-right:2.0vw;margin-bottom: 0vw"> <img src="pictures/icons/address.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : Vidyasirimedhi Institute of Science and Technology, Wangchan Valley, 555 Moo 1 Payupnai, Wangchan, Rayong, Thailand</p>
+      <!-- <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw;margin-bottom: 1vw"> <img src="pictures/icons/tel.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : (+66) 875751549</p> -->
 
       <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/gmail.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : zumoarthicha@gmail.com</p>
       <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <img src="pictures/icons/gmail.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : arthicha.zumo@mail.kmutt.ac.th</p>
@@ -528,6 +545,7 @@ i.year {
       <p style="font-size:1.2vw;margin-top: 1vw;padding-left:1.0vw"> <a href="https://github.com/Arthicha" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/github.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : GitHub</a></p>
       <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <a href="https://www.researchgate.net/profile/Arthicha_Srisuchinnawong" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/researchgate.png" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : ResearchGate</a></p>
       <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <a href="https://scholar.google.com/citations?user=tllpPXsAAAAJ&hl=en&oi=ao" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/googlescholar.png" height="20vw" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : GoogleScholar</a></p>
+      <p style="font-size:1.2vw;margin-top: 0.3vw;padding-left:1.0vw"> <a href="https://orcid.org/0000-0002-7997-745X" style="text-decoration: none; color:black;font-size:1.2vw"> <img src="pictures/icons/orcid.png" height="20vw" style="margin-top: 0vw;margin-bottom: 0vw;vertical-align:sub;height:1.2vw"> : 0000-0002-7997-745X </a></p>
     </center>
   </div>
 
