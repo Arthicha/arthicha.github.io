@@ -184,6 +184,21 @@ i.year {
   background: rgba(0,0,0,0.8);float:center;padding: 0 0 0 0; margin: 0 0 0 0;display:flex;
 }
 
+img.res {
+  width: 50%;
+  height: auto;
+}
+
+video.res {
+  width: 50%;
+  height: auto;
+}
+
+iframe.res {
+  width: 30vw;
+  height: 20vw;
+}
+
 </style>
 
 
@@ -274,7 +289,7 @@ i.year {
       <p class="information"> 
         A basic neural locomotion control for generating different gaits was implemented on the gecko robot. From the preliminary experiment, each gait had its characteristics. For example, the trot gait is fast, but the robot with the trot gait always slips and falls on steep slopes. The wave gait, on the other hand, is slow but is more stable. Therefore, we used the pitch angle as the feedback to determine the robot's gait and proposed the gecko robot with gait adaptation. With this strategy, the robot can translate to a suitable gait autonomously by reducing the speed to gain more stability when climbing steep slopes. Details of this work is in <a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none;">the paper</a>.
         <center>
-          <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+          <video class="res" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
             <source src="http://www.manoonpong.com/ICAR2019/video.mp4" type="video/mp4">
           </video>
           <p class="caption">Video: The gecko robot climbing with adaptable gait a changing slope.</p>
@@ -285,11 +300,11 @@ i.year {
       <p class="information"> 
         Extending from our previous work, my colleagues and I designed a new gecko robot and developed more advanced neural locomotion control. In 2020, we have presented the first tailless gecko robot that is able to climb vertical surfaces and avoid obstacles by climbing sideways. Up to that time, climbing a vertical surface had not been reported by any tailless gecko robots; additionally, the previously developed gecko robots could only climb forward.  
         <center>
-        <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+        <video class="res" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
         <source src="http://www.manoonpong.com/JINT/video1.mp4" type="video/mp4">
         </video>
         <p class="caption">Video: The gecko robot with adaptable gait climbing a changing slope upto 90 degree.</p>
-        <video width="640" height="360" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+        <video class="res" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
         <source src="http://www.manoonpong.com/JINT/video2.mp4" type="video/mp4">
         </video>
         <p class="caption">Video: The gecko robot climbing sideways to avoid the obstacles locating on its path.</p>
@@ -317,7 +332,7 @@ i.year {
         With a team of ten, we built an intelligent robot arm integrated with vision-based machine learning for advanced pick-and-place. The robot's tasks are twofold. First, the robot detects nameplates locating on the sidewalls and floor, and it picks them. Next, it attaches all the plates to the front wall in the correct order according to the labels.
         <center>
         <figure>
-        <img src="pictures/project/module89_team.png" width="600" height="400">
+        <img src="pictures/project/module89_team.png" class="res">
         <p class="caption">Figure: The robot arm for advanced pick-and-place.</p>
         </figure>
         </center>
@@ -332,7 +347,7 @@ i.year {
       <p class="information"> 
         Due to the non-standard robot configuration, we had to solve inverse kinamatics by ourselves, and we did this via geometry approach and kinematic decoupling. The simulation used to validate the inverse kinamatic equation is shown below. Another challange in robot control is path planing since the robot should avoid hitting the walls and itself. Consequently, we employed pottential field as our path planing algorithm. 
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/71FU94bBjBs?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=71FU94bBjBs&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class="res" src="https://www.youtube.com/embed/71FU94bBjBs?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=71FU94bBjBs&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The simulation used to validate the inverse kinamatic equation.</p>
         </center>
       </p>
@@ -343,10 +358,10 @@ i.year {
         The robot interprets the labels by using an ensemble machine learning, where the probabilistic output vectors of three models (convolutional neural network (CNN), random forest (RF), and k-nearest neighbor (KNN)) are averaged. Dealing with data hungry deep learning, the models were trained on an enormous pool of synthetic data generated from font scraping. However, the performance of the model on captured labels is not good without applying an edge detector and skeletonizaition to all the images, as presented in the table below (more details can be seen from <a href="https://ieeexplore.ieee.org/abstract/document/8712759" style="text-decoration: none;"> the paper</a>). At last, the classification is robust enough to correctly classify the labels with complex fonts and the handwritten ones as shown in the video below. 
         <center>
         <figure>
-        <img src="pictures/project/module89_transfer.PNG" width="700" height="200">
+        <img src="pictures/project/module89_transfer.PNG" class='res' style="width:85%">
         <p class="caption">Table: The F1-score of the classification.</p>
         </figure>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/8SWfL4L6MHo?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=8SWfL4L6MHo&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res'src="https://www.youtube.com/embed/8SWfL4L6MHo?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=8SWfL4L6MHo&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The demonstration of the classification.</p>
         </center>
       </p>
@@ -355,9 +370,9 @@ i.year {
       <p class="information" style="margin-bottom: 3vw"> </p>
       <p class="information"> 
         <center>
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/y-yY0PuGL6Y?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=y-yY0PuGL6Y&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
+          <iframe class='res' src="https://www.youtube.com/embed/y-yY0PuGL6Y?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=y-yY0PuGL6Y&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
           <p class="caption">Video: Demonstration.</p>
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/lX-O7UcXecY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=lX-O7UcXecY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
+          <iframe class='res' src="https://www.youtube.com/embed/lX-O7UcXecY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=lX-O7UcXecY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"> </iframe>
           <p class="caption">Video: Demonstration.</p>
         </center>
       </p>
@@ -374,7 +389,7 @@ i.year {
         Drawing Bot was built by me and my team in 2017 with our expertise in mechanical design, embedded system, control theory, image processing, and machine learning. The robot's goal is to copy, sketch, and paint the picture shown beforehand. If the picture contains more than one color, it is drawn with the corresponding color pens. In December 2017, Drawing Bot was exhibited in the International Robotics Exhibitions at the Thailand Robotics Week 2017.
 
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/7Bu3LbkdVA8?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7Bu3LbkdVA8&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res' src="https://www.youtube.com/embed/7Bu3LbkdVA8?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7Bu3LbkdVA8&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: Drawing Bot drawing a picture of me and my team.</p>
         </center>
 
@@ -386,7 +401,7 @@ i.year {
 
         <center>
           <figure>
-            <img src="pictures/project/drawingbot_structure.PNG" width="640" height="360">
+            <img src="pictures/project/drawingbot_structure.PNG" class='res'>
             <p class="caption">Figure: Drawing Bot.</p>
           </figure>
         </center>
@@ -402,7 +417,7 @@ i.year {
         After the image is captured, K-mean clustering divides the pixels into three groups, the centroids of which are compared with the pen color to deal with multi-color images. The algorithm subsequently extracts lines from contours, edges, and shading regions before the lines are combined to the TCP trajectory of image coordinates. A polynomial regression model, trained with a calibration sheet, then converts the trajectory into world coordinates; and they are encoded to high-level protocol later on.
         <center>
           <figure>
-            <img src="pictures/project/drawingbot_trajectory.png" width="280" height="360">
+            <img src="pictures/project/drawingbot_trajectory.png" class='res' style="width:25%">
             <p class="caption">Figure: Visualization of the trajectory.</p>
           </figure>
         </center>
@@ -413,12 +428,12 @@ i.year {
       <p class="information"> 
         <center>
           <figure>
-            <img src="pictures/project/drawingbot_result1.png" width="280" height="400">
-            <img src="pictures/project/drawingbot_result2.png" width="280" height="400">
+            <img src="pictures/project/drawingbot_result1.png" class='res' style="width:25%">
+            <img src="pictures/project/drawingbot_result2.png" class='res' style="width:25%">
             <p class="caption">Figure: Drawing Bot's paintings: Kyro Ren's helmet (left) and Stormtrooper (right).</p>
           </figure>
           <figure>
-            <img src="pictures/project/drawingbot_cover.png" width="600" height="400">
+            <img src="pictures/project/drawingbot_cover.png" class='res'>
             <p class="caption">Figure: Drawing Bot's paintings.</p>
           </figure>
         </center>
@@ -454,7 +469,7 @@ i.year {
         Model-free reinforcement learning (RL) is a popular learning technique in robotics; however, it requires a long learning time. <a href="https://arxiv.org/abs/1708.02596" style="text-decoration: none;"> Model-based RL</a> is an alternative method to accelerate and constrain learning. With this method, the internal model of the system is learned along with the sequence of actions is optimized for a high reward.
         <center>
         <figure>
-            <img src="pictures/project/modelbased_overview.PNG" width="640" height="500">
+            <img src="pictures/project/modelbased_overview.PNG" class='res'>
           </figure>
         <p class="caption">Figure: Overview of the model-based reinforcement learning used here.</p>
         </center>
@@ -471,18 +486,18 @@ i.year {
       <p class="information"> 
         
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/RLEyvARsUbc?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=RLEyvARsUbc&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res' src="https://www.youtube.com/embed/RLEyvARsUbc?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=RLEyvARsUbc&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The inverted pendulum.</p>
         </center>
 
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/7LDrV0sKHgk?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7LDrV0sKHgk&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res' src="https://www.youtube.com/embed/7LDrV0sKHgk?start=0&;end=7&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=7LDrV0sKHgk&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The Acrobot.</p>
         </center>
 
 
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/L1HZXZxPtp4?start=2&;end=10&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=L1HZXZxPtp4&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res' src="https://www.youtube.com/embed/L1HZXZxPtp4?start=2&;end=10&;rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=L1HZXZxPtp4&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: The compass gait.</p>
         </center>
       </p> 
@@ -498,7 +513,7 @@ i.year {
       <p class="information"> 
         Dynamic models of multi-joint legged robots are difficult to obtain, so they are hard to control as well. Reinforcement learning (RL) allows training a neural network that maps observations directly to actions and produces successful locomotion.
         <center>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/SOISIxcmLSY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=SOISIxcmLSY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
+        <iframe class='res' src="https://www.youtube.com/embed/SOISIxcmLSY?rel=0&;controls=0&;showinfo=0;autoplay=1&mute=1;&playlist=SOISIxcmLSY&loop=1" allow="autoplay; encrypted-media;" frameborder="0"></iframe>
         <p class="caption">Video: Learning locomotion.</p>
         </center>
       </p>
@@ -506,8 +521,8 @@ i.year {
       <p class="information"> 
         Proximal Policy Optimization (PPO) is one RL method that commonly leads to good results with a high reward. One variance of PPO utilizes KL divergence to limit the change of the network parameters and prevent falling-off-a-cliff. However, some sets of the hyperparameters may result in being stuck at local optima, as shown in the figure below. When this happens, the robot receives constant rewards and believes that it has selected the optimal actions, which actually is not. 
         <center>
-        <figure><img src="pictures/project/rbppo_local1.gif" width="320" height="250">
-          <img src="pictures/project/rbppo_local2.gif" width="320" height="250">
+        <figure><img src="pictures/project/rbppo_local1.gif" class='res' style="width:25%">
+          <img src="pictures/project/rbppo_local2.gif" class='res' style="width:25%">
           </figure>
         <p class="caption">Figure: The walker gets stuck at local optima.</p>
         </center>
@@ -517,7 +532,7 @@ i.year {
         To deal with the problem, I proposed the concept of reward-based PPO. The idea behind this is to relax the constraint when the reward remains stable and strengthen the constrain when the reward significantly changes. With this technique, I found that using a set of hyperparameter (&alpha; = 0.10 and &tau; = 0.4) could provide good results without being stuck in local optima for all the robots tested. The locomotion of the trained robots are presented in the first video. 
         <center>
         <figure>
-          <img src="pictures/project/rbppo_result.PNG" width="640" height="400">
+          <img src="pictures/project/rbppo_result.PNG" class='res'>
           </figure>
         <p class="caption">Table: Rewards obtained from the neural networks trained with KL divergence based and reward-based PPO with different hyperparameters.</p>
         </center>
