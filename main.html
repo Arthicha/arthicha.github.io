@@ -50,7 +50,7 @@
 
 .smallcol {
     width:24%;
-    height:20vh;
+    height:auto;
     float: left;
    background-color:white;
    position: -webkit-sticky;
@@ -60,11 +60,22 @@
 
 .maincol {
     width:74%;
-    height:250.0vh;
+    height:auto;
     float: left;
    background-color:white;
    border-right: 1px solid black;
  }
+
+ div.highlight{
+  background:#A2D2E7;margin-left:2vw;width:94.5%;border-style: groove;border-color:#A2D2E7;
+  animation: glowing 1000ms infinite;
+ }
+
+ @keyframes glowing {
+  0% { background-color: #A2D2E7; box-shadow: 0 0 0px #2E9CCA; }
+  50% { background-color: #A2D2E7; box-shadow: 0 0 10px #2E9CCA; }
+  100% { background-color: #A2D2E7; box-shadow: 0 0 0px #2E9CCA; }
+}
 
 p.paragraph {
   word-wrap: break-word;
@@ -89,6 +100,18 @@ p.pub {
 img.res {
   width: 60%;
   height: auto;
+}
+
+video.res {
+  width: 40%;
+  height: auto;
+}
+
+.caption {
+  margin-top: 1.1vw;
+  margin-bottom: 1.1vw;
+  font-size:1.1vw;
+  font-style: italic;
 }
 
 </style>
@@ -152,6 +175,28 @@ img.res {
   <p class="paragraph"> 
     Arthicha's first achievement was being the only robotics student in the batch who received Petchra Pra Jom Klao Academic Excellence Scholarship. In 2018, he discovered a simple preprocessing that allows training neural networks with an easy-to-obtain synthetic dataset. In the same year, he was a recipient of Thailand and Institute of Field Robotics Scholarship for New Research Initiatives and started working on neural locomotion control for gecko robots. Two years later, he presented the world's first tailless gecko robot with the ability to climb up to 90 degrees and avoid obstacles by moving sideways.
   </p>
+
+
+  <br>
+    <h1 style="display:block;color: #16496A;font-size:1.6vw;margin-left:2vw;margin-bottom: 0vh;">
+      Highlight  <hr style='display:inline-block; width:87.5%;margin-left:0vw;height:0.001%;color: #16496A;border: none; padding-bottom: 0.1vw; border-top: 0.2vw solid;' />
+    </h1>
+  <br>
+
+  <div class="highlight">
+  <p class="paragraph" style="padding-left:1vw;padding-right:1vw;"> 
+    <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, published in the Journal of Intelligent and Robotic System. Visite <a href="https://arthicha.github.io/publication.html" style="text-decoration: none;"> the publication page</a> for more details.
+  </p>
+  <center>
+
+      <a href="https://arthicha.github.io/publication.html" style="text-decoration: none;"> <img src="pictures/highlight/jint_paper.png"  style="width:17.3%;margin-right:5%"></a> 
+        <video class="res" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
+        <source src="http://www.manoonpong.com/JINT/video2.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Video: The gecko robot climbing sideways to avoid the obstacles locating on its path.</p>
+        </center>
+  </div>
+
   
   <br>
     <h1 style="display:block;color: #16496A;font-size:1.6vw;margin-left:2vw;margin-bottom: 0vh;">
@@ -177,51 +222,7 @@ img.res {
     <b> Languages: </b> thai, english </br>
     <b> Hobbies: </b> <a href="https://arthicha.github.io/project.html" style="text-decoration: none;"> robots</a>, <a href="https://www.google.com/maps/d/u/0/edit?mid=1k8Wr73BPHrbRJBJKARvL1HQRS-XrI69y&usp=sharing" style="text-decoration: none;"> travel</a>, <a href="https://www.imdb.com/list/ls084720361/" style="text-decoration: none;"> movies</a>  </br>
   </p>
-
-
-  <br>
-    <h1 style="display:block;color: #16496A;font-size:1.6vw;margin-left:2vw;margin-bottom: 0vh;">
-      Publications  <hr style='display:inline-block; width:85%;margin-left:0vw;height:0.001%;color: #16496A;border: none; padding-bottom: 0.1vw; border-top: 0.2vw solid;' />
-    </h1>
-  <br>
-
-  <p class="paragraph"> 
-    Details in <a href="https://arthicha.github.io/publication.html" style="text-decoration: none;"> the publication page</a> and <a href="https://arthicha.github.io/project.html" style="text-decoration: none;"> the project page</a>.
-  </p>
-
-  <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
-
-  <li> 
-    <p class="pub">
-          Arthicha Srisuchinnawong, Bingcheng Wang, Donghao Shao, Potiwat Ngamkajornwiwat, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2021) <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, Journal of Intelligent and Robotic Systems (JINT) 101, 27, <a href="https://doi.org/10.1007/s10846-020-01285-y" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: https://doi.org/10.1007/s10846-020-01285-y</a>. 
-    </p>
-  </li>
-
-  <center>
-          <p class="paragraph" style="margin-bottom: 2vw"> </p>
-          <figure>
-          <img class='res' src="pictures/publication/jint_2021.png" >
-          <p class="caption">Figure: Modular neural locomotion control for obstacle avoidance of a tailless gecko robot.</p>
-          </figure>
-          <p class="paragraph" style="margin-bottom: 2vw"> </p>
-  </center>
-  <li> 
-    <p class="pub">Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Pitiwut Teerakittikul, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2019) <b>Neural Control for Gait Generation and Adaptation of a Gecko Robot</b>, the 19th International Conference on Advanced Robotics (ICAR),<a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.1109/ICAR46387.2019.8981580</a>. 
-    </p>
-  </li>
-
-  <li> 
-    <p class="pub">Arthicha Srisuchinnawong (2018), <b>The Development of Gecko Robot Locomotion on Uneven Surface using an Artifcial Hormone Mechanism</b>, B.Eng. thesis, Institute of Field Robotics, King Mongkut’s University of Technology Thonburi, Bangkok, Thailand. </p>
-  </li> 
-
-  <li> 
-    <p class="pub">Arthicha Srisuchinnawong, Bawornsak Sakulkueakulsuk, and Warasinee Chaisangmongkon (2018) <b>Word Recognition in Captured Images by CNN Trained with Synthetic Images</b>, International Computer Science and Engineering Conference (ICSEC),<a href="https://ieeexplore.ieee.org/abstract/document/8712759" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.1109/ICSEC.2018.8712759</a>.
-    </p> 
-  </li> 
-
-
-  </ul>
-
+  <p style="margin-bottom:1%;margin-left:85%;font-size:1vw;color:#D5D5D5"> update 28 January 2021 </p>
   </div>
 
 
