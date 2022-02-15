@@ -234,15 +234,90 @@ td.abs {
         
     </ul> 
 
-
+    <! --- publication template --->
     <br>
     <div > <b>
       <span style="color: #29648A;font-size:1.8vw;margin-left:2vw">Scientific Journal</span>
     </b> </div>
+
     <br>
     <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
         <li> <p class="paragraph">
-        	Arthicha Srisuchinnawong, Bingcheng Wang, Donghao Shao, Potiwat Ngamkajornwiwat, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2021) <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, Journal of Intelligent and Robotic Systems (JINT) 101, 27, <a href="https://doi.org/10.1007/s10846-020-01285-y" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: https://doi.org/10.1007/s10846-020-01285-y</a>. <button onclick="journal1()" class="button">more info</button>
+          Sujet Phodapol, Thirawat Chuthong, inggwong Leung, Arthicha Srisuchinnawong, Poramate Manoonpong, and Nat Dilokthanakul (2021) <b> GRAB: GRAdient-Based Shape-Adaptive Locomotion Control</b>, IEEE Robotics and Automation Letters. <a href="https://ieeexplore.ieee.org/abstract/document/9665302?casa_token=a9BcKWN9EZoAAAAA:SoFmQP5rRhGYJkMbN25OUNq2Dp-Cl1suhpUvdxXsRW3HFZQU-AIPLL1A5VwBEAtuaRQHWpldedpv" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.1109/LRA.2021.3137555</a>.  <button onclick="journal3()" class="button">abstract</button>
+
+  <table id="journal3" style="display:none;background:white;width:97%">
+  <tr>
+    <td class="fig">
+      <center>
+        <figure>
+        <img src="pictures/publication/ral_2022.png" class="res">
+        <p class="caption">Figure: GRAdient-Based shape adaptive control (GRAB).</p>
+        </figure>
+      </center>
+
+    </td>
+    <td  class="abs">
+      <p class="paragraph" style="color:#644866;margin-left:2vw;margin-right:2vw"> <i>
+            Adaptive systems enable legged robots to cope with a wide range of environmental settings and unforeseen events. Existing reactive methods adapt either the walking frequency or the amplitude to only simple perturbations. This letter proposes an adaptive mechanism for central pattern generator (CPG)-based locomotion control that online-reacts to both internal and external soft constraints by adapting both the frequency and amplitude of driving signals. Our approach, namely GRAdient-Based shape adaptive control (GRAB), utilises real-time sensory signals for adapting the dynamics of the CPG. GRAB reacts to locomotion soft constraints given in a loss function. It can quickly adapt CPG’s dynamics variables to reduce such a loss, with a gradient-descent-like update step. The update perturbs the shape of the driving signal, which implicitly changes both frequency and amplitude of the robot locomotion pattern. We test the GRAB mechanism on a hexapod robot and its simulation, where we demonstrate its several benefits over a state-of-the-art adaptive control baseline. First, we show that it can be used for reducing the tracking error by simultaneously changing the walking amplitude and frequency. Also, GRAB can be used for limiting the maximum torque/current, preventing motor damage from unexpected perturbations. Finally, we demonstrate how GRAB can be utilised to naturally adjust the robot’s walking speed while taking into account multiple constraints, including target walking speed, external weight perturbations, and the robot’s physical limit.
+            </i></p>
+    </td>
+  </tr>
+  </table>
+
+        <script>
+        function journal3() {
+          var x = document.getElementById("journal3");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script> 
+      </ul>
+    <! --- publication template --->
+
+    <! --- publication template --->
+    <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
+        <li> <p class="paragraph">
+          Arthicha Srisuchinnawong, Jettanan Homchanthanakul, and Poramate Manoonpong (2021) <b> NeuroVis: Real-time Neural Information Measurement and Visualization of Embodied Neural Systems</b>, Front. Neural Circuits. <a href="https://www.frontiersin.org/articles/10.3389/fncir.2021.743101/full" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.3389/fncir.2021.743101</a>.  <button onclick="journal2()" class="button">abstract</button>
+
+  <table id="journal2" style="display:none;background:white;width:97%">
+  <tr>
+    <td class="fig">
+      <center>
+        <figure>
+        <img src="pictures/publication/frontier_2021.png" class="res">
+        <p class="caption">Figure: Neurovis.</p>
+        </figure>
+      </center>
+
+    </td>
+    <td  class="abs">
+      <p class="paragraph" style="color:#644866;margin-left:2vw;margin-right:2vw"> <i>
+            Understanding the real-time dynamical mechanisms of neural systems remains a significant issue, preventing the development of efficient neural technology and user trust. This is because the mechanisms, involving various neural spatial-temporal ingredients [i.e., neural structure (NS), neural dynamics (ND), neural plasticity (NP), and neural memory (NM)], are too complex to interpret and analyze altogether. While advanced tools have been developed using explainable artificial intelligence (XAI), node-link diagram, topography map, and other visualization techniques, they still fail to monitor and visualize all of these neural ingredients online. Accordingly, we propose here for the first time “NeuroVis,” real-time neural spatial-temporal information measurement and visualization, as a method/tool to measure temporal neural activities and their propagation throughout the network. By using this neural information along with the connection strength and plasticity, NeuroVis can visualize the NS, ND, NM, and NP via i) spatial 2D position and connection, ii) temporal color gradient, iii) connection thickness, and iv) temporal luminous intensity and change of connection thickness, respectively. This study presents three use cases of NeuroVis to evaluate its performance: i) function approximation using a modular neural network with recurrent and feedforward topologies together with supervised learning, ii) robot locomotion control and learning using the same modular network with reinforcement learning, and iii) robot locomotion control and adaptation using another larger-scale adaptive modular neural network. The use cases demonstrate how NeuroVis tracks and analyzes all neural ingredients of various (embodied) neural systems in real-time under the robot operating system (ROS) framework. To this end, it will offer the opportunity to better understand embodied dynamic neural information processes, boost efficient neural technology development, and enhance user trust.
+            </i></p>
+    </td>
+  </tr>
+  </table>
+
+        <script>
+        function journal2() {
+          var x = document.getElementById("journal2");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script> 
+      </ul>
+    <! --- publication template --->
+
+
+    <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
+        <li> <p class="paragraph">
+        	Arthicha Srisuchinnawong, Bingcheng Wang, Donghao Shao, Potiwat Ngamkajornwiwat, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2021) <b>Modular Neural Control for Gait Adaptation and Obstacle Avoidance of a Tailless Gecko Robot</b>, Journal of Intelligent and Robotic Systems (JINT) 101, 27, <a href="https://doi.org/10.1007/s10846-020-01285-y" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: https://doi.org/10.1007/s10846-020-01285-y</a>. <button onclick="journal1()" class="button">abstract</button>
 
   <table id="journal1" style="display:none;background:white;width:97%">
   <tr>
@@ -348,7 +423,7 @@ td.abs {
       </script>
     </ul> 
 
-      <p style="margin-bottom:2%;margin-top:5%;margin-left:85%;font-size:1vw;color:#D5D5D5"> update 28 January 2021 </p>
+      <p style="margin-bottom:2%;margin-top:5%;margin-left:85%;font-size:1vw;color:#D5D5D5"> update 15 Februlary 2022 </p>
   </div>
 
 
