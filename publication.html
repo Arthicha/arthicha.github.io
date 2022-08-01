@@ -441,6 +441,79 @@ td.abs {
 
     </ul> 
 
+    <br>
+    <div > <b>
+      <span style="color: #29648A;font-size:1.8vw;margin-left:2vw">Conference Proceeding</span>
+    </b> </div>
+    <br>
+    <ul style="font-size:1.2vw;color: black;margin-bottom:0.1vw;margin-left:4vw;margin-top:0.5vw;margin-right:1vw">
+      <li> <p class="paragraph">Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Pitiwut Teerakittikul, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2019) <b>Neural Control for Gait Generation and Adaptation of a Gecko Robot</b>, the 19th International Conference on Advanced Robotics (ICAR),<a href="https://ieeexplore.ieee.org/abstract/document/8981580" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.1109/ICAR46387.2019.8981580</a>. <button onclick="conf2()" class="button">abstract</button> </p></li>
+      <table id="conf2" style="display:none;background:white;width:97%">
+      <tr>
+    <td class="fig">
+      <center>
+        <figure>
+        <img src="pictures/publication/icar_2019.png" class="res">
+        <p class="caption">Figure: gecko robot locomotion with gait adaptation.</p>
+        </figure>
+      </center>
+
+    </td>
+    <td  class="abs">
+      <p class="paragraph" style="color:#644866;margin-left:2vw;margin-right:2vw"> <i>
+            Geckos are highly adaptable creatures, able to scale a variety of slopes, including walls, and can change their gait depending on their environment. Roboticists have tried to implement this behaviour in gecko robots. So far, an open-loop controlled robot without a tail that uses only one specific gait can climb to a 50° slope. In this paper, we propose neural control that allows a gecko robot to climb to a 70° slope by generating different gaits for various slope angles. The control consists of three main components: a central pattern generator (CPG) for generating various rhythmic patterns, CPG post-processing for shaping the CPG signals, and a delay line for transmitting the shaped CPG signals to drive the legs of the gecko robot. The robot uses a body inclination sensor to provide sensory feedback for gait adaptation. When the incline is below 35°, the robot walks with a predefined fast trot gait. If the incline is increased, it will change its gait from the trot gait to an intermediate gait, followed by a slow wave gait, which is both the most stable and the slowest gait, for climbing the steepest slopes. Using this walking strategy, the robot can efficiently climb a variety of slopes using different gaits and can automatically adapt its gait to maximise speed while ensuring stability.
+            </i></p>
+    </td>
+  </tr>
+  </table>
+
+      <script>
+      function conf2() {
+        var x = document.getElementById("conf2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+
+
+
+
+      <li> <p class="paragraph">Arthicha Srisuchinnawong, Bawornsak Sakulkueakulsuk, and Warasinee Chaisangmongkon (2018) <b>Word Recognition in Captured Images by CNN Trained with Synthetic Images</b>, International Computer Science and Engineering Conference (ICSEC),<a href="https://ieeexplore.ieee.org/abstract/document/8712759" style="text-decoration: none; color:blue;font-size:1.2vw"> DOI: 10.1109/ICSEC.2018.8712759</a>. <button onclick="conf1()" class="button">abstract</button>  </p> </li> 
+
+      <table id="conf1" style="display:none;background:white;width:97%">
+      <tr>
+    <td class="fig">
+      <center>
+        <figure>
+        <img src="pictures/publication/icsec_2018.png" class="res">
+        <p class="caption">Figure: demonstration of classification with CNN trained solely on synthetic dataset.</p>
+        </figure>
+      </center>
+
+    </td>
+    <td  class="abs">
+      <p class="paragraph" style="color:#644866;margin-left:2vw;margin-right:2vw"> <i>
+      Problems like robotic navigation and automatic geocoding of businesses require artificial agents to perform rapid and accurate word recognition in natural images. We set out to develop a deep learning method to recognize words from different languages in captured images, with high accuracy and with small number of captured samples. Our experiments reveal three main findings. First, we feed images of words as inputs to the neural network directly, omitting segmentation and postprocessing step to avoid compound errors. We found this method to work well for our samples. Second, we are able to train machine learning models to recognize words using purely synthetic training samples by applying feature extractions to both training and testing datasets prior to passing them through deep networks. This achievement allows us to train neural network cheaply on synthetic data and transfer knowledge to recognize words in real data. Third, we set up experiments to compare model performances when using Canny edge detection and Chu's 3D thinning algorithm as preprocessing methods. We found that Canny edge detection performs better in most cases.
+            </i></p>
+    </td>
+  </tr>
+  </table>
+
+      <script>
+      function conf1() {
+        var x = document.getElementById("conf1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+    </ul> 
+
       <p style="margin-bottom:2%;margin-top:5%;margin-left:85%;font-size:1vw;color:#D5D5D5"> update 4 May 2022 </p>
 
 
