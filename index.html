@@ -1,354 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>  
-		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-		<title>Arthicha Srsuchinnawong</title>
-		<meta name="google-site-verification" content="5GEP9FBG2E5g1XkvGTkQ3wRMAEPauuBi_s275W4FKZk" />
-		<meta http-equiv='cache-control' content='no-cache'> 
-		<meta http-equiv='expires' content='0'> 
-		<meta http-equiv='pragma' content='no-cache'>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFYTW3XMTK"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-RFYTW3XMTK');
-		</script>
+    <title>Redirect</title>  
+    <meta http-equiv="refresh" content="0; main.html" />  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFYTW3XMTK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RFYTW3XMTK');
+    </script>
 </head>  
+
+<body style="background-color:black;">
+<form>
+<!-- <center class="container">
+	<p> <b style="color:white;font-size: 22px;"> Please enter the password. </b> </p>
+	<input class="password" name="password" id="password" type="password">
+    <input class="button" type="button" value="Submit" onclick="myFunction()">
+</center> -->
+
 
 <style>
 * {
-	 margin: 0px;
-	 padding: 0px;
+   margin: 0px;
+   padding: 0px;
+}
+  
+.button {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.icon-bar {
-	width: 100%;
-	background-color: #AAABB8;
-	overflow: auto;
+.password {
+  background-color: #555555; /* Green */
+  border: none;
+  color: gray;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.icon-bar a {
-	float: right;
-	width: 200px;
-	text-align: center;
-	padding: 10px 0;
-	transition: all 0.3s ease;
-	color: white;
-	font-size: 22px;
-	border-left:2px solid white;
-	font-family: sans-serif;
-}
-
-.icon-bar a:hover {
-	background-color: #29648A;
-}
-
-.active {
-	background-color: #AAABB8; /* Green */
-	color = Navy
-}
-
-
-
-.wrapper {
-	width: 1200px;
-	margin: 0 auto;
-	text-align: left;
-	display: flex;
-	justify-content: space-between; 
-	font-family: ariel black, sans-serif;
-}
-
-.smallcol {
-		width:0%;
-		height:auto;
-		float: left;
-	 background-color:white;
-	 position: -webkit-sticky;
-	position: sticky;
-	top: 0;
- }
-
-.maincol {
-		width:100%;
-		height:auto;
-		float: left;
-	 background-color:white;
-	 border-right: 1px solid #AAABB8;
-	 border-left: 1px solid #AAABB8;
-	 border-bottom: 1px solid #AAABB8;
- }
-
- div.highlight{
-	background:#A2D2E7;margin-left:2vw;width:94.5%;border-style: groove;border-color:#A2D2E7;
-	animation: glowing 1000ms infinite;
- }
-
- @keyframes glowing {
-	0% { background-color: #A2D2E7; box-shadow: 0 0 0px #2E9CCA; }
-	50% { background-color: #A2D2E7; box-shadow: 0 0 10px #2E9CCA; }
-	100% { background-color: #A2D2E7; box-shadow: 0 0 0px #2E9CCA; }
-}
-
-p.list {
-	word-wrap: break-word;
-	text-align: justify;
-	text-justify: inter-word;
-
-	font-size:18px;
-	margin-top: 0px;
-	padding-left:20px;
-	padding-right:20px;
-	margin-bottom: 0px;
-	line-height: 25px;
-}
-
-li.list {
-	word-wrap: break-word;
-	text-align: justify;
-	text-justify: inter-word;
-
-	font-size:18px;
-	margin-top: 0px;
-	padding-left:20px;
-	padding-right:20px;
-	margin-bottom: 0px;
-	line-height: 25px;
-}
-
-
-
-p.paragraph {
-	word-wrap: break-word;
-	text-align: justify;
-	text-justify: inter-word;
-
-	font-size:18px;
-	margin-top: 5px;
-	padding-left:20px;
-	padding-right:20px;
-	margin-bottom: 15px;
-	line-height: 25px;
-}
-
-h1.title {
-	display:inline-block;
-	font-size:40px;
-	margin-top: 20px;
-	margin-left:20px;
-	margin-right:20px;
-	margin-bottom: 20px;
-	line-height: 20px;
-	color: #16496A; 
-}
-
-img.icon {
-	float:left; 
-	vertical-align:sub;
-	width:15%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left:80px;
-	padding-right:80px;
-}
-
-h1.header {
-	display:block;
-	font-size:30px;
-	margin-top: 5px;
-	margin-left:20px;
-	margin-right:20px;
-	margin-bottom: 0px;
-	line-height: 15px;
-	color: #29648A;
-}
-
-h3.header {
-	display:block;
-	font-size:25px;
-	margin-top: 5px;
-	margin-left:20px;
-	margin-right:20px;
-	margin-bottom: 5px;
-	line-height: 15px;
-	color: #29648A;
-}
-
-hr.line {
-	color: #29648A;
-	border: none;
-	border-top: 2px solid;
-}
-
-i.year {
-  color: #29648A;font-size:16px;
-  font-weight: bolder;
-}
-
-
-p.pub {
-	word-wrap: break-word;
-	text-align: justify;
-	text-justify: inter-word;
-	font-size:1.2vw;color: black;margin-bottom:1.0vw;margin-left:0vw;margin-top:0.5vw;margin-right:2vw
-}
-
-img.res {
-	width: 60%;
-	height: auto;
-}
-
-video.res {
-	width: 40%;
-	height: auto;
-}
-
-.caption {
-	margin-top: 1.1vw;
-	margin-bottom: 1.1vw;
-	font-size:1.1vw;
-	font-style: italic;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 </style>
+</form> 
 
+<!-- update 23 Jan 2023-->
 
 <script>
+function myFunction(){
+  var pass = document.getElementById("password").value;
 
-		var images = new Array ("cover0.png","cover1.png")
-		var image_count = Math.floor(Math.random() * 2);
-
-		function rollover (image_id, millisecs) {
-			var image = document.getElementById(image_id);
-			image.src = "pictures/cover/"+images[image_count];
-			image_count++;
-			if (image_count >= images.length) {
-				image_count = 0;
-			}
-			setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
-		}
-
-		rollover("slider",10000);
-
+	if(pass == "58340500051"){
+        window.location.href="main.html"
+        <!-- alert("correct!"); -->
+   }else{
+    	<!-- alert("Incorrect!"); -->
+    }
+}
 </script>
- 
- 
-
-<body> <!-- web body -->
-<div class="wrapper">  <!-- web body  wrapper-->
-	<div class="maincol"> <!-- main column -->
-
-		<div class="icon-bar"> <!-- top manu bar -->
-			
-			<!-- <a href="education.html" style="text-decoration: none"> <b>EDUCATION</b></a>  -->
-			<!-- <a href="experience.html" style="text-decoration: none"> <b>EXPERIENCES</b></a> -->
-			<a href="publication.html" style="text-decoration: none"> <b>publication</b></a> 
-			<a href="project.html" style="text-decoration: none"> <b>previous work</b></a> 
-			<a class="active" href="main.html" style="text-decoration: none"> <b>home</b> </a>
-		</div>
-
-	<!-- cover picture -->
-	<img src="pictures/cover/cover0.png" id="slider" style="display:block;height:400px;width:100%;opacity:75%;"> </img>
-
-		<br>
-		<h1 class="title">
-			Arthicha Srisuchinnawong
-		</h1>
-		<br>
-	 
-		
-		
-		<br>
-		<h1 class='header'> Biography </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-		<br>
-
-		<img src="pictures/me.png" width="20%" style="padding-right: 30px; padding-left: 30px; padding-top: 10px; float: right;">	
-
-		<p class="paragraph"> 
-		Arthicha Srisuchinnawong was born in Chiang Mai, Thailand, in 1997. He received a Bachelor's degree in robotics and automation engineering with first-class honors from the <a href="http://fibo.kmutt.ac.th/fibo/en/" style="text-decoration: none;"> Institute of Field Robotics (FIBO), King Mongkut's University of Technology Thonburi, Thailand</a>, in 2019. He did his research internship with <a href="https://neutron.manoonpong.com/" style="text-decoration: none;"> NEUTRON Laboratory, Nanjing University of Aeronautics and Astronautics (NUAA)</a>, China in 2018. Currently, he persues his master degree in robot system (advanced robotics technology) and carries out research at <a href="https://ens-lab.sdu.dk/" style="text-decoration: none;"> the Embodied-AI & Neurorobotics Laboratory (ENS-LAB), the University of Southern Denmark (SDU), Denmark</a>, and work in colaboration with <a href="https://brain.vistec.ac.th/" style="text-decoration: none;"> the Bio-Inspired Robotics & Neurl Engineering Laboratory (BRAIN-LAB), Vidyasirimedhi Institute of Science and Technology (VISTEC), Thailand</a>. 
-	</p>
-	
-	<p class="paragraph"> 
-		Arthicha's achievements includes receiving Petchra Pra Jom Klao Academic Excellence Scholarship and Thailand and the Institute of Field Robotics Scholarship for New Research Initiatives. In 2018, he discovered a simple preprocessing that allows training neural networks with an easy-to-obtain synthetic dataset. In 2020, he presented the world's first tailless gecko robot with the ability to climb up to 90 degrees and avoid obstacles by moving sideways.
-	</p>
-
-	<br>
-		<h1 class='header'> Research Interest </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-		<br>
-	<br>
-		
-	<p class="paragraph"> 
-		Robotics, Robot Control, Bio-inspired Robotics, Artificial Intelligence, Machine Learning, Neural Networks, Bio-inspired Artificial Intelligence, Robot Locomotion, Legged Robots, Intepreatable Artificial Intelligence, and Optimization.
-	</p>
-
-	<br>
-		<h1 class='header'> Education </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-		<br>
-	<br>
-
-	<img src="pictures/icons/sdu.png" class="icon"> </img>
-		<h3 class='header'> M.Sc. Engineering: Robot System - Advanced Robotics Technologies</h3>
-		<p class='list'> University of Southern Denmark (SDU), Denmark </p>
-		<p class='list'> Overall GPA 11.2 / 12.0 (93%) </p>
-		<p class='list'> <i> Sep 2021 - now </i></p>
-		<br>
-		<h3 class='header' style="font-size:18px"> Achievements </h3>
-		<li class='list'> 1<sup>st</sup> place in the SDU Case Competition 2021 - Autonomous Hackathon. <i class="year"> (2021) </i> </li>
-		<li class='list'> finalist in the SDU Case Competition 2022 - Sustainable futures. <i class="year"> (2022) </i> </li>
-		<li class='list'> <a href="https://www.sdu.dk/en/robotelite" style="text-decoration: none;"> Elite Summer School: Robotics and Entrepreneurship </a>  <i class="year"> (2022) </i> </li>
-
-	<br><br><br>
-
-	<img src="pictures/icons/kmutt.png" class="icon" style="margin-top: 30px; margin-bottom: 50px;"> </img>
-		<h3 class='header'> B.Eng. Robotics and Automation Engineering</h3>
-		<p class='list'> Institute of FIeld roBOtics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT), Thailand </p>
-		<p class='list'> Overall GPA 3.87 / 4.00 (97%) </p>
-		<p class='list'> <i> Jul 2015 - Jun 2019 </i></p>
-		<br>
-		<h3 class='header' style="font-size:18px"> Achievements </h3>
-		<li class='list'> Graduated with 1<sup>st</sup> class honors & in the top 3%. <i class="year"> (2019) </i> </li>
-		<li class='list'> Petchra Pra Jom Klao Bachelor Degree Scholarship: Academic Execellence. <i class="year"> (2015-2019) </i> </li>
-		<li class='list'> Thailand and Institute of Field Robotics Scholarship for New Research Initiatives. <i class="year"> (2018) </i> </li>
-		<li class='list'> Enhancing Student Mobility Scholarship. <i class="year"> (2018) </i> </li>
-		<li class='list'> Honour mathematics and general physics programs <i class="year"> (2015-2017) </i> </li>
-	<br>
-	<!--
-	<br><br><br>
-
-	<img src="pictures/icons/satit.png" class="icon"> </img>
-		<h3 class='header'> High School Diploma from Mathematics and Science Program </h3>
-		<p class='list'> Chiang Mai University Demonstration School, Chiang Mai, Thailand </p>
-		<p class='list'> Overall GPA 3.91 / 4.00 (98%) </p>
-		<p class='list'> <i> May 2012 - Mar 2015 </i></p>
-		<br>
-		<h3 class='header' style="font-size:18px"> Achievements </h3>
-		<li class='list'> 7<sup>th</sup>-place in the QUOTA examination score <i class="year"> (2015) </i> </li>
-		<li class='list'> Achieved full score from the mathematics examination in the Ordinary National Educational Test (O-NET). <i class="year"> (2015) </i> </li>
-	-->
-	
-
-	<br>
-		<h1 class='header'> Contact </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-	<br>
-
-	<p class="list"> <img src="pictures/icons/address.png" style="vertical-align:sub;height:22px"> : University of Southern Denmark, Odense, Denmark</p>
-	<p class="list"> <img src="pictures/icons/gmail.png" style="vertical-align:sub;height:22px"> : arsri21@student.sdu.dk, arthichas_pro@vistec.ac.th, zumoarthicha@gmail.com</p>
-	<p class="list"> <a href="https://github.com/Arthicha" style="text-decoration: none;"> <img src="pictures/icons/github.png" style="height:22px"> : Arthicha</a></p>
-	<p class="list"> <a href="https://scholar.google.com/citations?user=tllpPXsAAAAJ&hl=en&oi=ao" style="text-decoration: none;"> <img src="pictures/icons/googlescholar.png" style="height:22px"> : Arthicha Srisuchinnawong</a></p>
-	<p class="list"> <a href="https://orcid.org/0000-0002-7997-745X" style="text-decoration: none"> <img src="pictures/icons/orcid.png" height="20vw" style="height:22px"> : 0000-0002-7997-745X </a></p>
 
 
-
-	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 27 January 2023 </p>
-	
-	</div> <!-- END main column -->
-
-
-</div> <!-- END body wrapper -->
-</body>
 </html>
