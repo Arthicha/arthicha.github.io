@@ -191,8 +191,9 @@ p.pub {
 	word-wrap: break-word;
 	text-align: justify;
 	text-justify: inter-word;
-	font-size:1.2vw;color: black;margin-bottom:1.0vw;margin-left:0vw;margin-top:0.5vw;margin-right:2vw
+	font-size:30px;color: black;
 }
+
 
 img.res {
 	width: 60%;
@@ -202,6 +203,20 @@ img.res {
 video.res {
 	width: 1150px;
 	height: 630px;
+}
+
+a.codebutton {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  #993d00;
+		background-color: white;
+		border: 2px solid #993d00; /* Green */
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 8px;
 }
 
 .fadedblack {
@@ -304,6 +319,63 @@ div.information{
 	<br>
 
 	<div class="fadedblack">
+		<img class = "projectimg" style= "top:200px;left: 200px;" id="project10" src="pictures/project/mir_cover.png" onclick="clicked(10)" onmouseover="hover(10)" onmouseout="over(10)"> 
+		</img>
+			
+		<img class="projectimg" style= "top:200px;left: 200px;" id="project11" src="pictures/project/xwing_cover.PNG" onclick="clicked(11)" onmouseover="hover(11)" onmouseout="over(11)" > 
+		</img>
+			
+		<img class="projectimg" style= "top:200px;left: 200px;" id="project12" src="pictures/project/barcode_cover.png" onclick="clicked(12)" onmouseover="hover(12)" onmouseout="over(12)" > </img>
+	</div>
+
+	<div id="info10" class="information" style="display:none"> 
+		<br> <h3 class="header"> <b> MiRCommunication: an easy interface to the Mobile iindustrial Robot's REST API </b> <i class="year"> (2022) </i></h3> <br>
+
+		<p class="paragraph"> We provided a public Python class for the MiR interface through REST API. With this class, one can use microcomputer such as raspberry pi to send MiR robot to diﬀerent target and perform precision docking with ease. This would further contribute to the development of technology, allowing people to experience and study mobile robot technology, and facilitating knowledge/skill development. <a href="https://github.com/Arthicha/MiRCommunication" class="codebutton"> Code </a> </p>
+
+		<figure>
+        <center>
+        <img src="pictures/project/mircommunication_example.png" class='res' style="width:60%">
+        <p class="caption">Figure: an example code.</p>
+        </center>
+      	</figure> <br>
+
+		<center> <iframe width="1120" height="630" src="https://www.youtube.com/embed/Q4uBYGSQAJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+	</div>
+
+	<div id="info11" class="information" style="display:none"> 
+		<br> <h3 class="header"> <b> Guidance, Navigation, and Control of an Autonomous X-wing Fighter </b> <i class="year"> (2022) </i> </h3> <br> 
+
+		<p class="paragraph"> This project aims to verify if existing guidance, navigation, and control techniques can achieved a comparable simulation result to the science friction spaceship, star wars' x-wing fighter, introduced nearly 50 years ago. With lookahead-based line-of-sight guidance system, Kalman state estimation, along with proportion-derivative control, the simulated x-wing fighter can navigate and perform a surveillance mission; however, the control parameters are sensitive and have to be selected carefully. <a href="https://github.com/Arthicha/Guidance-Navigation-and-Control-of-an-Autonomous-X-wing-Fighter" class="codebutton"> Code </a>  </p>
+
+		<figure>
+        <center>
+        <img src="pictures/project/xwing_diagram.png" class='res' style="width:100%">
+        <p class="caption">Figure: guidance, navigation, and control systems.</p>
+        </center>
+      	</figure> <br>
+
+		<center> <iframe width="1120" height="630" src="https://www.youtube.com/embed/vUd8cK0Ot9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+	</div>
+
+	<div id="info12" class="information" style="display:none"> 
+		<br> <h3 class="header"> <b> Adaptive Barcode Reader </b> <i class="year"> (2022) </i></h3> <br>
+
+		<p class="paragraph"> This git repository provides an adaptive barcode detection and decoding function for robust barcode detection and decoding. <a href="https://github.com/Arthicha/Guidance-Navigation-and-Control-of-an-Autonomous-X-wing-Fighter" class="codebutton"> Code </a> </p>
+
+		<figure>
+        <center>
+        <img src="pictures/project/adaptive_barcode.png" class='res' style="width:80%">
+        <p class="caption">Figure: flowchart of the adaptive barcode reader.</p>
+        </center>
+      	</figure> <br>
+
+      	<center> <iframe width="1120" height="630" src="https://www.youtube.com/embed/Q4uBYGSQAJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+	</div>
+
+
+
+	<div class="fadedblack">
 		<img class = "projectimg" style= "top:200px;left: 200px;" id="project1" src="pictures/project/loft_cover.png" onclick="clicked(1)" onmouseover="hover(1)" onmouseout="over(1)"> 
 		</img>
 			
@@ -316,7 +388,8 @@ div.information{
 	<div id="info1" class="information" style="display:none"> 
 		<br> <h3 class="header"> <b> LOFT: Long-term autOnomy For service robots in consTruction </b> <i class="year"> (2022) </i></h3> <br>
 
-		<p class="paragraph"> LOFT’s purpose is to explore the potential of robotics and AI in the construction sector by employing mobile service robots with long-term autonomy to transport material for workers reliably and efficiently while maintaining safe worker-robot interaction.  To achieve the aim, LOFT will develop and deliver intelligent robot control technology with advanced perception and safe and social-aware navigation for service robots in the construction industry. </p>
+		<p class="paragraph"> LOFT’s purpose is to explore the potential of robotics and AI in the construction sector by employing mobile service robots with long-term autonomy to transport material for workers reliably and efficiently while maintaining safe worker-robot interaction.  To achieve the aim, LOFT will develop and deliver intelligent robot control technology with advanced perception and safe and social-aware navigation for service robots in the construction industry. </p>v
+
 
 		<center> <iframe width="1120" height="630" src="https://www.youtube.com/embed/EPC3H-tXD3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 	</div>
@@ -362,7 +435,7 @@ div.information{
 		<img class = "projectimg" style= "top:200px;left: 200px;" id="project4" src="pictures/project/geckorobot_cover.png" onclick="clicked(4)" onmouseover="hover(4)" onmouseout="over(4)"> 
 		</img>
 			
-		<img class="projectimg" style= "top:200px;left: 200px;" id="project5" src="pictures/project/module89_cover.PNG" onclick="clicked(5)" onmouseover="hover(5)" onmouseout="over(5)" > 
+		<img class="projectimg" style= "top:200px;left: 200px;" id="project5" src="pictures/project/module89_cover.png" onclick="clicked(5)" onmouseover="hover(5)" onmouseout="over(5)" > 
 		</img>
 			
 		<img class="projectimg" style= "top:200px;left: 200px;" id="project6" src="pictures/project/drawingbot_cover.png" onclick="clicked(6)" onmouseover="hover(6)" onmouseout="over(6)" > </img>
@@ -408,7 +481,7 @@ div.information{
 		<br> <h3 class="header"> <b> Drawing Bot </b> <i class="year"> (2017) </i></h3> <br>  <br>
 
 		<center>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/7Bu3LbkdVA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="1120" height="630" src="https://www.youtube.com/embed/7Bu3LbkdVA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		</center>
 
 
@@ -419,7 +492,7 @@ div.information{
 		<img class = "projectimg" style= "top:200px;left: 200px;" id="project7" src="pictures/project/ravana_cover.png" onclick="clicked(7)" onmouseover="hover(7)" onmouseout="over(7)"> 
 		</img>
 			
-		<img class="projectimg" style= "top:200px;left: 200px;" id="project8" src="pictures/project/modelbased_cover.PNG" onclick="clicked(8)" onmouseover="hover(8)" onmouseout="over(8)" > 
+		<img class="projectimg" style= "top:200px;left: 200px;" id="project8" src="pictures/project/modelbased_cover.png" onclick="clicked(8)" onmouseover="hover(8)" onmouseout="over(8)" > 
 		</img>
 			
 		<img class="projectimg" style= "top:200px;left: 200px;" id="project9" src="pictures/project/rbppo_cover.png" onclick="clicked(9)" onmouseover="hover(9)" onmouseout="over(9)" > </img>
@@ -483,7 +556,7 @@ div.information{
 
 <script>
 
-				var maxindex = 9;
+				var maxindex = 12;
         function clicked(main) {
           var x = document.getElementById("info"+main.toString());var y = document.getElementById("project"+main.toString());
           if (x.style.display === "none") {
