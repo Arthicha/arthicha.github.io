@@ -95,11 +95,11 @@
  }
 
  .iconcol {
-		width:240px; 
+		width:400px; 
 }
 
  .noniconcol {
-		width:960px;
+		width:800px;
  }
 
  div.highlight{
@@ -116,14 +116,15 @@
 
 
 .list {
-	/*word-wrap: break-word;
+	word-wrap: break-word;
 	text-align: justify;
-	text-justify: inter-word;*/
+	text-justify: inter-word;
 
 	font-size:18px;
 	margin-top: 0px;
+	margin-left: 50px;
 	padding-left:20px;
-	padding-right:20px;
+	padding-right:15px;
 	margin-bottom: 0px;
 	line-height: 25px;
 }
@@ -156,11 +157,19 @@ h1.title {
 }
 
 img.icon {
-	width:75%;
+	width:50%;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-left:15%;
-	padding-right:10%;
+	padding-left:25%;
+	padding-right:25%;
+}
+
+img.paper {
+	width:90%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left:5%;
+	padding-right:5%;
 }
 
 h1.header {
@@ -175,13 +184,17 @@ h1.header {
 }
 
 h3.header {
+	word-wrap: break-word;
+	text-align: justify;
+	text-justify: inter-word;
+
 	display:block;
 	font-size:25px;
 	margin-top: 5px;
 	margin-left:20px;
 	margin-right:20px;
 	margin-bottom: 5px;
-	line-height: 15px;
+	line-height: 32px;
 	color: #29648A;
 }
 
@@ -219,6 +232,97 @@ video.res {
 	margin-bottom: 1.1vw;
 	font-size:1.1vw;
 	font-style: italic;
+}
+
+a.paperbutton {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  #f44336;
+		background-color: white;
+		border: 2px solid #f44336; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
+}
+
+a.paperbutton:hover {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  white;
+		background-color: #f44336;
+		border: 2px solid #f44336; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
+}
+
+
+a.videobutton {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  #008CBA;
+		background-color: white;
+		border: 2px solid #008CBA; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
+}
+
+a.videobutton:hover {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  white;
+		background-color: #008CBA;
+		border: 2px solid #008CBA; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
+}
+
+a.codebutton {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  #993d00;
+		background-color: white;
+		border: 2px solid #993d00; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
+}
+
+a.codebutton:hover {
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+
+		text-decoration: none;
+		color:  white ;
+		background-color: #993d00;
+		border: 2px solid #993d00; 
+		padding-left: 10px;
+		padding-right: 5px;
+		border-radius: 8px;
+		align:  right;
 }
 
 </style>
@@ -277,24 +381,14 @@ video.res {
 		<img src="pictures/me.png" width="20%" style="padding-right: 30px; padding-left: 30px; padding-top: 10px; float: right;">	
 
 		<p class="paragraph"> 
-		Arthicha Srisuchinnawong was born in Chiang Mai, Thailand, in 1997. He received a Bachelor's degree in robotics and automation engineering with first-class honors from the <a href="http://fibo.kmutt.ac.th/fibo/en/" style="text-decoration: none;"> Institute of Field Robotics (FIBO), King Mongkut's University of Technology Thonburi, Thailand</a>, in 2019, and did his research internship at <a href="https://neutron.manoonpong.com/" style="text-decoration: none;"> NEUTRON Laboratory, Nanjing University of Aeronautics and Astronautics (NUAA)</a>, China in 2018. Currently, he is studying a master degree in robot system (advanced robotics technology) and colaborating with <a href="https://ens-lab.sdu.dk/" style="text-decoration: none;"> the Embodied-AI & Neurorobotics Laboratory (ENS-LAB), the University of Southern Denmark (SDU), Denmark</a> and <a href="https://brain.vistec.ac.th/" style="text-decoration: none;"> the Bio-Inspired Robotics & Neurl Engineering Laboratory (BRAIN-LAB), Vidyasirimedhi Institute of Science and Technology (VISTEC), Thailand</a>. 
+		Arthicha Srisuchinnawong was born in Thailand in 1997. He received <a href="https://www.sdu.dk/en/uddannelse/kandidat/robotteknologi" style="text-decoration: none;"> M.Sc. in engineering — robot systems (advanced robotics technology) from the University of Southern Denmark (SDU), Denmark </a>, in 2023, and <a href="http://fibo.kmutt.ac.th/fibo/en/" style="text-decoration: none;">  B.Eng. in robotics and automation engineering from the Institute of Field Robotics (FIBO), King Mongkut's University of Technology Thonburi, Thailand</a>, in 2019. Currently he is working as academic research engineer at <a href="https://brain.vistec.ac.th/research/research-center-for-advanced-robotics-and-intelligent-automation/" style="text-decoration: none;"> the research center for advanced robotics & intelligent automation (ARIA), Vidyasirimedhi Institute of Science and Technology (VISTEC), Thailand</a>. 
 	</p>
-	
-	
 	<p class="paragraph"> 
-		Arthicha's research achievements includes receiving the Institute of Field Robotics Scholarship for New Research Initiatives, proposed simple preprocessing that allows training neural networks with an easy-to-obtain synthetic dataset, and the world's first tailless gecko robot with the ability to climb up to 90 degrees and avoid obstacles by moving sideways.
+		 Throughout 6 years of his research experience, Arthicha have been collaborated with people from over 20 nationalities, participated in 5 research projects, and co-authored 3 patents. His research achievements span across various domains in robotics, including robot learning, interpretable modular neural control for adaptive robots, climbing and walking robots, and lower-limb exoskeleton. He has developed, to the publication date, the world's first tailless gecko robot that climbs vertical surfaces and avoids obstacles by moving sideways and the fastest's legged pipe climbing robot. These achievements have been recognized through international publications in scorpus-indexed journals and conference proceedings. 
 	</p>
 	
+		<br><br><br>
 
-	<br>
-		<h1 class='header'> Research Interest </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-		<br>
-	<br>
-		
-	<p class="paragraph"> 
-		Robotics, Robot Control, Bio-inspired Robotics, Artificial Intelligence, Machine Learning, Neural Networks, Bio-inspired Artificial Intelligence, Robot Locomotion, Legged Robots, Intepreatable Artificial Intelligence, and Optimization.
-	</p>
 
 	<br>
 		<h1 class='header'> Education </h1>
@@ -303,51 +397,52 @@ video.res {
 	<br>
 	<div class="wrapper">
 		<div class="iconcol"> <!-- icon column -->
-			<img src="pictures/icons/sdu.png" class="icon" style="margin-top: 30px"> </img>
+			<img src="pictures/icons/sdu.png" class="icon" style="margin-top: 40px"> </img>
 		</div>
 
 		<div class="noniconcol"> <!-- non-icon column -->
-			<h3 class='header'> M.Sc. Engineering: Robot System - Advanced Robotics Technologies</h3>
-			<p class='list'> University of Southern Denmark (SDU), Denmark </p>
-			<p class='list'> Overall GPA 11.5 / 12.0 (96%) </p>
-			<p class='list'> <i> Sep 2021 - now </i></p>
+			<h3 class='header'> M.Sc. Robot System (Advanced Robotics Technology)</h3>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> University of Southern Denmark (SDU), Denmark </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 11.5 / 12.0 (96%) </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Sep 2021 - Jun 2023 </i></p>
 			<br>
 			<h3 class='header' style="font-size:18px"> Achievements </h3>
-			<li class='list'> 1<sup>st</sup> place in the SDU Case Competition 2021 - Autonomous Hackathon. <i class="year"> (2021) </i> </li>
-			<li class='list'> Finalist in the SDU Case Competition 2022 - Sustainable futures. <i class="year"> (2022) </i> </li>
-			<li class='list'> <a href="https://www.sdu.dk/en/robotelite" style="text-decoration: none;"> Elite Summer School: Robotics and Entrepreneurship </a>  <i class="year"> (2022) </i> </li>
+			<li class='list'> 1<sup>st</sup> place in the SDU Case Competition 2021 - Autonomous Hackathon.  </li>
+			<li class='list'> Finalist in the SDU Case Competition 2022 - Sustainable futures.  </li>
+			<li class='list'> <a href="https://www.sdu.dk/en/robotelite" style="text-decoration: none;"> Elite Summer School: Robotics and Entrepreneurship </a>   </li>
 		</div>
 	</div>
 	<br><br><br>
 
 	<div class="wrapper">
 		<div class="iconcol"> <!-- icon column -->
-			<img src="pictures/icons/kmutt.png" class="icon" style="margin-top: 50px"> </img>
+			<img src="pictures/icons/kmutt.png" class="icon" style="margin-top: 80px"> </img>
 		</div>
 
 		<div class="noniconcol"> <!-- non-icon column -->
 			<h3 class='header'> B.Eng. Robotics and Automation Engineering</h3>
-			<p class='list'> Institute of FIeld roBOtics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT), Thailand </p>
-			<p class='list'> Overall GPA 3.87 / 4.00 (97%) </p>
-			<p class='list'> <i> Jul 2015 - Jun 2019 </i></p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Institute of FIeld roBOtics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT), Thailand </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 3.87 / 4.00 (97%) </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Jul 2015 - Jun 2019 </i></p>
 			<br>
 			<h3 class='header' style="font-size:18px"> Achievements </h3>
-			<li class='list'> Graduated with 1<sup>st</sup> class honors & in the top 3%. <i class="year"> (2019) </i> </li>
-			<li class='list'> Petchra Pra Jom Klao Bachelor Degree Scholarship: Academic Execellence. <i class="year"> (2015-2019) </i> </li>
-			<li class='list'> Thailand and Institute of Field Robotics Scholarship for New Research Initiatives. <i class="year"> (2018) </i> </li>
-			<li class='list'> Enhancing Student Mobility Scholarship. <i class="year"> (2018) </i> </li>
-			<li class='list'> Honour mathematics and general physics programs <i class="year"> (2015-2017) </i> </li>
+			<li class='list'> Graduated with 1<sup>st</sup> class honors & in the top 3%. </li>
+			<li class='list'> Petchra Pra Jom Klao Bachelor Degree Scholarship: Academic Execellence. </li>
+			<li class='list'> Thailand and Institute of Field Robotics Scholarship for New Research Initiatives. </li>
+			<li class='list'> Enhancing Student Mobility Scholarship. </li>
+			<li class='list'> Honor mathematics and general physics programs </li>
 		</div>
 	</div>
 	
+	<!--
 	<br><br><br>
 
 	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
+		<div class="iconcol"> 
 			<img src="pictures/icons/satit.png" class="icon"> </img>
 		</div>
 
-		<div class="noniconcol"> <!-- non-icon column -->
+		<div class="noniconcol"> 
 			<h3 class='header'> High School Diploma (with focus in mathematics and sciences) </h3>
 			<p class='list'> Chiang Mai University Demonstration School, Chiang Mai, Thailand </p>
 			<p class='list'> Overall GPA 3.91 / 4.00 (98%) </p>
@@ -357,13 +452,76 @@ video.res {
 			<li class='list'> 7<sup>th</sup> place in the QUOTA examination score <i class="year"> (2015) </i> </li>
 			<li class='list'> Full score in the mathematics examination of the Ordinary National Educational Test (O-NET). <i class="year"> (2015) </i> </li>
 		</div>
+	</div> -->
+
+
+	<br><br><br>
+
+	<br>
+		<h1 class='header'> Selected Publications </h1>
+		<h1 class='header'> <hr class='line' />  </h1>
+		<br>
+	<br>
+
+	<div class="wrapper">
+		<div class="iconcol"> <!-- icon column -->
+			<img src="pictures/publication/loft.gif" class="paper" style="margin-top: 40px"> </img>
+		</div>
+
+		<div class="noniconcol"> <!-- non-icon column -->
+			<h3 class='header'> Unsupervised Multiple Proactive Behavior Learning of Mobile Robots for Smooth and Safe Navigation </h3>
+			<h3 class='header' style="font-size:16px"> IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024 </h3>
+			<p class='paragraph'> This study introduces a model-free neural control architecture featuring a plug-and-play Multiple Proactive Behavior Learning (MPL) module. Unlike existing approaches that rely on model-based assumptions and extensive data, the MPL adapts control policies online in an unsupervised manner using minimal data. By correlating sensory inputs with local planner commands, the MPL enables autonomous learning of proactive behaviors for smoother motion and collision avoidance. It improves motion smoothness by 10% and reduces collisions by 30% in static environments, and cuts collisions by up to 70% in dynamic settings, offering an efficient cooperation betwen model-free and model-based controls.</p>
+			<br>
+			<p align='right'>
+				 <a href="https://youtu.be/yF7n7kNFumo" class="videobutton"> Video </a> &nbsp;
+			</p>
+		</div>
 	</div>
+
+	<br>
+
+	<div class="wrapper">
+		<div class="iconcol"> <!-- icon column -->
+			<img src="pictures/publication/avis.gif" class="paper" style="margin-top: 80px"> </img>
+		</div>
+
+		<div class="noniconcol"> <!-- non-icon column -->
+			<h3 class='header'> Adaptive Bipedal Robot Walking on Industrial Pipes under Neural Multimodal Locomotion Control: Toward Robotic Out-pipe Inspection </h3>
+			<h3 class='header' style="font-size:16px">  IEEE/ASME Transactions on Mechatronics, 2023 </h3>
+			<p class='paragraph'> Out-pipe inspection robots face challenges in balancing on curved surfaces, climbing pipes, overcoming obstacles, and transitioning between segments. This work introduces an adaptive bipedal robot with neural multimodal locomotion control for semi-autonomous inspection. Using eight interpretable neural modules, the control system enables the robot to adapt to various locomotion modes, achieving a speed of 10 cm/s on both horizontal and vertical pipes, improving energy efficiency by over 200% compared to previously developed robots, and overcoming obstacles up to 14 cm in height.</p>
+			<br>
+			<p align='right'>
+				<a href="https://ieeexplore.ieee.org/abstract/document/10190136" class="paperbutton"> Paper </a>  &nbsp;   <a href="https://www.youtube.com/embed/SpwumbieLr8" class="videobutton"> Video </a> &nbsp;
+			</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="wrapper">
+		<div class="iconcol"> <!-- icon column -->
+			<img src="pictures/publication/exo_amnc.gif" class="paper" style="margin-top: 80px"> </img>
+		</div>
+
+		<div class="noniconcol"> <!-- non-icon column -->
+			<h3 class='header'> Adaptive Modular Neural Control for Online Gait Synchronization and Adaptation of an Assistive Lower-Limb Exoskeleton </h3>
+			<h3 class='header' style="font-size:16px">  IEEE Transactions on Neural Networks and Learning Systems, 2023 </h3>
+			<p class='paragraph'> This study presents an adaptive modular neural control (AMNC) system for online gait synchronization of a lower-limb assistive exoskeleton, aimed at preventing conflicting movements and enhancing assistance performance. The AMNC leverages distributed neural modules that interact to utilize neural dynamics and feedback signals, enabling real-time synchronization of exoskeleton movements with the user's gait while reducing tracking errors. Compared to existing methods, AMNC enhances phase, frequency, and shape adaptation, achieving up to an 80% reduction in tracking errors and a 30% decrease in unseen interaction torque.</p>
+			<br>
+			<p align='right'>
+				<a href="https://ieeexplore.ieee.org/document/10097588" class="paperbutton"> Paper </a>  &nbsp;   <a href="https://youtu.be/WwdrFzYO8fY" class="videobutton"> Video </a> &nbsp; <a href="https://github.com/Arthicha/EXOVIS_AMNC" class="codebutton"> Code </a> &nbsp;
+			</p>
+		</div>
+	</div>
+	
+	
 
 	<br><br><br>
 
 	
 		
-	
+	<!--
 
 	<br>
 		<h1 class='header'> Experience </h1>
@@ -372,11 +530,11 @@ video.res {
 	<br>
 
 	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
+		<div class="iconcol"> 
 			<img src="pictures/icons/brain.png" class="icon" style="margin-top: 80px"> </img>
 		</div>
 
-		<div class="noniconcol"> <!-- non-icon column -->
+		<div class="noniconcol"> 
 			<h3 class='header'> Research Engineer </h3>
 			<p class='list'> Bio-Inspired Robotics & Neurl Engineering Laboratory (BRAIN-LAB), VISTEC, Thailand </p>
 			<p class='list'> <i> Jul 2020 - now </i></p>
@@ -392,11 +550,11 @@ video.res {
 	<br><br><br>
 
 	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
+		<div class="iconcol"> 
 			<img src="pictures/icons/ens.png" class="icon" style="margin-top: 20px"> </img>
 		</div>
 
-		<div class="noniconcol"> <!-- non-icon column -->
+		<div class="noniconcol"> 
 			<h3 class='header'> Student Assistance</h3>
 			<p class='list'> Embodied-AI & Neurorobotics Laboratory (ENS-LAB), SDU, Denmark </p>
 			<p class='list'> <i> Feb 2022 - Dec 2022 </i></p>
@@ -408,12 +566,13 @@ video.res {
 	
 	<br><br><br>
 
+	
 	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
+		<div class="iconcol"> 
 			<img src="pictures/icons/neutron.png" class="icon" style="margin-top: 50px"> </img>
 		</div>
 
-		<div class="noniconcol"> <!-- non-icon column -->
+		<div class="noniconcol"> 
 			<h3 class='header'> Research Intern</h3>
 			<p class='list'> Neurorobotic Technology for Advanced Robot Motor Control (NEUTRON Lab), NUAA, China </p>
 			<p class='list'> <i> May 2018 - Jan 2019 </i></p>
@@ -421,7 +580,7 @@ video.res {
 			<h3 class='header' style="font-size:18px"> Tasks </h3>
 			<li class='list'> Neural locomotion control for gait adaptation and obstacle avoidance of tailless gecko-inspired climbing robots. <i class="year"> (2018-2019) </i> </li>
 		</div>
-	</div>
+	</div>  -->
 
 	<br><br><br>
 
@@ -430,15 +589,15 @@ video.res {
 		<h1 class='header'> <hr class='line' />  </h1>
 	<br>
 
-	<p class="list"> <img src="pictures/icons/address.png" style="vertical-align:sub;height:22px"> : University of Southern Denmark, Odense, Denmark</p>
-	<p class="list"> <img src="pictures/icons/mail.png" style="vertical-align:sub;height:22px"> : arthichas_pro@vistec.ac.th, zumoarthicha@gmail.com</p>
+	<p class="list"> <img src="pictures/icons/address.png" style="vertical-align:sub;height:22px"> : Vidyasirimedhi Institute of Science and Technology, Rayong, Thailand </p>
+	<p class="list"> <img src="pictures/icons/mail.png" style="vertical-align:sub;height:22px"> : arthichas_pro@vistec.ac.th</p>
 	<p class="list"> <a href="https://github.com/Arthicha" style="text-decoration: none;"> <img src="pictures/icons/github.png" style="height:22px"> : Arthicha</a></p>
 	<p class="list"> <a href="https://scholar.google.com/citations?user=tllpPXsAAAAJ&hl=en&oi=ao" style="text-decoration: none;"> <img src="pictures/icons/googlescholar.png" style="height:22px"> : Arthicha Srisuchinnawong</a></p>
 	<p class="list"> <a href="https://orcid.org/0000-0002-7997-745X" style="text-decoration: none"> <img src="pictures/icons/orcid.png" height="20vw" style="height:22px"> : 0000-0002-7997-745X </a></p>
 
 
 
-	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 27 January 2023 </p>
+	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 19 August 2024 </p>
 	
 	</div> <!-- END main column -->
 
