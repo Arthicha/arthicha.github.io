@@ -28,6 +28,7 @@
 		-->
 		<!-- Google tag (gtag.js) -->
 		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 </head>  
 
 <style>
@@ -96,12 +97,16 @@ blockquote {
 	 position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+
  }
 
 .maincol {
 		width:100%;
 		height:auto;
 		float: left;
+
+	flex-direction: row;
+	flex-wrap: wrap;
 	 background-color:white;
 	 border-right: 1px solid #AAABB8;
 	 border-left: 1px solid #AAABB8;
@@ -255,9 +260,17 @@ img.res {
 	height: auto;
 }
 
+
 video.res {
 	width: 40%;
 	height: auto;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .caption {
