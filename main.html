@@ -38,25 +38,36 @@
 }
 
 .icon-bar {
-	width: 100%;
-	background-color: #AAABB8;
-	overflow: auto;
+  width: 100%;
+  background-color: #AAABB8;
+  overflow: auto;  /* keeps floats contained */
+  box-sizing: border-box;
+  /* padding-left if needed */
+}
+
+.icon-bar .name {
+  float: left;
+  padding: 10px 20px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .icon-bar a {
-	float: right;
-	width: 200px;
-	text-align: center;
-	padding: 10px 0;
-	transition: all 0.3s ease;
-	color: white;
-	font-size: 22px;
-	border-left:2px solid white;
-	font-family: sans-serif;
+  float: right;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 22px;
+  border-left: 2px solid white;
+  font-family: sans-serif;
 }
 
 .icon-bar a:hover {
-	background-color: #29648A;
+  background-color: #29648A;
 }
 
 .active {
@@ -252,7 +263,7 @@ p.pub {
 
 a.link{
 	text-decoration: none;
-	color:  black;	
+	color:  blue;	
 }
 
 img.res {
@@ -377,19 +388,81 @@ div.announcement-box {
       color: #003366;
       padding: 15px;
       border-radius: 6px;
-      font-size: 22px;
+      font-size: 20px;
       width: fit-content;
       max-width: 85%;
       margin: 20px auto; /* centers the box */
       text-align: center;
     }
 
-</style>
 
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* optional, keep image responsive */
+  }
+
+  #slider {
+    display: block;
+    height: 400px;
+    width: 100%;
+    opacity: 0.75; /* use decimal for CSS opacity */
+  }
+
+.overlay-text {
+    position: absolute;
+    bottom: 30px;       /* distance from bottom */
+    right: 30px;        /* distance from right */
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 2px 4px rgba(1.0,1.0,1.0,0.7);
+    pointer-events: none;
+}
+
+.robot-quote {
+  font-style: italic;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 6px solid #00aaff;
+  padding: 1.5em 2em;
+  width: 600px; /* fixed width */
+  margin: 2em auto;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.robot-quote p {
+  margin: 0;
+  width: 600px; /* fixed width */
+  white-space: pre-line; /* keep whitespace for tabs */
+}
+
+.robot-quote footer {
+  margin-top: 1em;
+  font-weight: 700;
+  text-align: right;
+  color: #00aaff;
+  font-size: 1.3rem;
+}
+
+.fade-text {
+  opacity: 0;
+  width: 600px; /* fixed width */
+  transition: opacity 1.0s ease-in-out;
+  font-style: italic;
+  font-size: 25px;
+  color: white;
+  padding-left: 40px; /* optional for indentation */
+}
+
+</style>
 
 <script>
 
-		var images = new Array ("cover2.png","cover1.png")
+		var images = new Array ("cover3.png","cover0.png")
 		var image_count = Math.floor(Math.random() * 2);
 
 		function rollover (image_id, millisecs) {
@@ -402,7 +475,7 @@ div.announcement-box {
 			setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
 		}
 
-		rollover("slider",1);
+		rollover("slider",5000);
 
 </script>
  
@@ -411,9 +484,10 @@ div.announcement-box {
 <body> <!-- web body -->
 <div class="wrapper">  <!-- web body  wrapper-->
 	<div class="maincol"> <!-- main column -->
-
 		<div class="icon-bar"> <!-- top manu bar -->
-			
+
+			<div class="name"> Arthicha Srisuchinnawong </div>
+					
 			<!-- <a href="education.html" style="text-decoration: none"> <b>EDUCATION</b></a>  -->
 			<!-- <a href="experience.html" style="text-decoration: none"> <b>EXPERIENCES</b></a> -->
 			<a href="talk.html" style="text-decoration: none"> <b>talks</b></a> 
@@ -423,13 +497,48 @@ div.announcement-box {
 		</div>
 
 	<!-- cover picture -->
-	<img src="pictures/cover/cover0.png" id="slider" style="display:block;height:400px;width:100%;opacity:75%;"> </img>
 
-	<br>
-	<h1 class="title">
-		Arthicha Srisuchinnawong
-	</h1>
-	<br>
+	<div class="image-container">
+	  <img src="pictures/cover/cover0.png" id="slider" alt="Cover Image">
+	  <div class="overlay-text">
+  			<div class="robot-qoute">
+	  		<p style="font-size: 32px;">
+		    <b> Robots can be our friends</b>;</p>
+		    <p id="quote-line" class="fade-text">... </p>
+		  
+		</div>
+	</div>	
+	</div>
+
+	<script>
+		  const lines = [
+		  "friends who do the opposite of what we want,",
+		    "friends who break their own legs,",
+		    "and friends who heat up easily"
+		    
+		  ];
+
+		  let current = 0;
+		  const textEl = document.getElementById("quote-line");
+
+		  function showNextLine() {
+		    textEl.style.opacity = 0;
+
+		    setTimeout(() => {
+		      textEl.innerHTML = lines[current];
+		      textEl.style.opacity = 1;
+
+		      current = (current + 1) % lines.length;
+
+		      setTimeout(showNextLine, 5000); // hold for 2 sec
+		    }, 1000); // fade out duration
+		  }
+
+		  window.onload = showNextLine;
+	</script>
+
+	
+
  
 	
 	<br>
@@ -437,21 +546,21 @@ div.announcement-box {
 	<h1 class='header'> <hr class='line' />  </h1>
 	<br>
 
-	<img src="pictures/me2.JPG" width="20%" style="padding-right: 30px; padding-left: 30px; padding-top: 15px;padding-bottom: 15px; float: right;">	
+	<img src="pictures/me2.JPG" width="20%" style="padding-right: 30px; padding-left: 30px; padding-top: 5px;padding-bottom: 5px; float: right;">	
 
 	<p class="paragraph"> 
-	I received <a class="link" href="https://www.sdu.dk/en/uddannelse/kandidat/robotteknologi" > M.Sc. in engineering — robot systems (advanced robotics technology) from the University of Southern Denmark (SDU), Denmark </a>, in 2023, and <a class="link" href="https://fibo.kmutt.ac.th/en/"> B.Eng. in robotics and automation engineering from the Institute of Field Robotics (FIBO), King Mongkut's University of Technology Thonburi, Thailand</a>, in 2019. Currently I am working as an academic research engineer at <a class="link" href="https://brain.vistec.ac.th/research/research-center-for-advanced-robotics-and-intelligent-automation/" > the research center for advanced robotics & intelligent automation (ARIA), Vidyasirimedhi Institute of Science and Technology (VISTEC), Thailand</a>. 
+	I received M.Sc. in engineering — robot systems (advanced robotics technology) from the <a class="link" href="https://www.sdu.dk/en/uddannelse/kandidat/robotteknologi" > University of Southern Denmark (SDU)</a>, Denmark , in 2023, and B.Eng. in robotics and automation engineering from the <a class="link" href="https://fibo.kmutt.ac.th/en/">Institute of Field Robotics (FIBO)</a>, King Mongkut's University of Technology Thonburi, Thailand, in 2019. Currently, I am an academic research engineer at the <a class="link" href="https://brain.vistec.ac.th/research/research-center-for-advanced-robotics-and-intelligent-automation/" >research center for advanced robotics & intelligent automation (ARIA)</a>, Vidyasirimedhi Institute of Science and Technology (VISTEC), Thailand. 
 	</p>
 
 	<p class="paragraph"> 
-		 I have been collaborated with people from over 20 nationalities, published 10 peer-reviewed publications, contributed to 5 projects, and co-authored 3 patents. My work also spans across various domains, including robot learning and adaptation, interpretable modular neural control, climbing and walking robots, and exoskeleton. 
+		 I have collaborated with people from over 20 nationalities, published 10 peer-reviewed publications, contributed to 5 projects, and co-authored 3 patents. I do <b><q>niche robotics</q></b>, exploring non-mainstream aspects and techniques that often seem impossible at first glance, with the aim of complementing or extending mainstream approaches. My work spans across various domains, including robot learning and adaptation, interpretable modular neural control, climbing and walking robots, and exoskeleton. 
 	</p>
 
 	<img src="pictures/illustration/SKTree.jpg" width="50%" style="padding-right: 30px; padding-left: 30px; padding-top: 15px;padding-bottom: 15px; float: left;">	
 
 
 	<p class="paragraph">
-		<b> I am currently persuring three challenging research questions: </b>
+		I believe that generalist robots can be achieved through continual learning and real-world adaptation. To this end, I am pursuing three ambitious research questions:
 	</p>
 
 	<p class="paragraph">
@@ -466,7 +575,6 @@ div.announcement-box {
 		<b> (3) Real-world Learning and Adaptation </b>: Can robots continuously learn and adapt in the real world without relying heavily on simulation-based pretraining?
 	</p>
 
-	<br>
 
 	<div class="announcement-box">
     I am open for Ph.D. opportunities for Fall 2026 and welcome collaborations in areas involving, but not limited to, robot learning and control around my research questions. Please feel free to contact me.
@@ -483,74 +591,9 @@ div.announcement-box {
 		 Arthicha developed the fastest leg-based pipe climbing robot (2023) and created the first tailless gecko robot climbing vertical surfaces and moving sideways to avoid obstacles (2021). These achievements have been recognized through international publications in scorpus-indexed journals and conference proceedings. 
 	</p> -->
 	
-		<br>
-
 	<br>
-		<h1 class='header'> Education </h1>
-		<h1 class='header'> <hr class='line' />  </h1>
-		<br>
-	<br>
-	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
-			<img src="pictures/icons/sdu.png" class="icon" style="margin-top: 40px"> </img>
-		</div>
 
-		<div class="noniconcol"> <!-- non-icon column -->
-			<h3 class='header'> M.Sc. Robot System (Advanced Robotics Technology)</h3>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> University of Southern Denmark (SDU), Denmark </p>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 11.5 / 12.0 (96%) </p>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Sep 2021 - Jun 2023 </i></p>
-			<br>
-			<h3 class='header' style="font-size:18px"> Achievements </h3>
-			<li class='list'> 1<sup>st</sup> place in <a href="https://www.sdu.dk/en/om-sdu/fakulteterne/teknik/nyt_fra_det_tekniske_fakultet/80-studerende-kom-med-autonome-loesninger-til-danfoss" style="text-decoration: none;"> the SDU Case Competition 2021 - Autonomous Hackathon </a>  </li>
-			<li class='list'> Finalist in the SDU Case Competition 2022 - Sustainable futures.  </li>
-			<li class='list'> <a href="https://www.sdu.dk/en/robotelite" style="text-decoration: none;"> Elite Summer School: Robotics and Entrepreneurship </a>   </li>
-		</div>
-	</div>
-	<br><br><br>
-
-	<div class="wrapper">
-		<div class="iconcol"> <!-- icon column -->
-			<img src="pictures/icons/kmutt.png" class="icon" style="margin-top: 80px"> </img>
-		</div>
-
-		<div class="noniconcol"> <!-- non-icon column -->
-			<h3 class='header'> B.Eng. Robotics and Automation Engineering</h3>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> Institute of FIeld roBOtics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT), Thailand </p>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 3.87 / 4.00 (97%) </p>
-			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Jul 2015 - Jun 2019 </i></p>
-			<br>
-			<h3 class='header' style="font-size:18px"> Achievements </h3>
-			<li class='list'> Graduated with 1<sup>st</sup> class honors & in the top 3%. </li>
-			<li class='list'> <a href="https://www.kmutt.ac.th/en/education/scholarships/" style="text-decoration: none;"> Petchra Pra Jom Klao Bachelor Degree Scholarship: Academic Execellence. </a> </li>
-			<li class='list'> Thailand and Institute of Field Robotics Scholarship for New Research Initiatives. </li>
-			<li class='list'> Enhancing Student Mobility Scholarship. </li>
-			<li class='list'> <a href="https://geo.kmutt.ac.th/%e0%b8%ab%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%a3%e0%b8%b5%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a1%e0%b8%b5%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%81%e0%b8%9a%e0%b8%9a%e0%b8%81%e0%b8%b2/" style="text-decoration: none;"> Honors classes: mathematics and general physics </a> </li>
-		</div>
-	</div>
 	
-	<!--
-	<br><br><br>
-
-	<div class="wrapper">
-		<div class="iconcol"> 
-			<img src="pictures/icons/satit.png" class="icon"> </img>
-		</div>
-
-		<div class="noniconcol"> 
-			<h3 class='header'> High School Diploma (with focus in mathematics and sciences) </h3>
-			<p class='list'> Chiang Mai University Demonstration School, Chiang Mai, Thailand </p>
-			<p class='list'> Overall GPA 3.91 / 4.00 (98%) </p>
-			<p class='list'> <i> May 2012 - Mar 2015 </i></p>
-			<br>
-			<h3 class='header' style="font-size:18px"> Achievements </h3>
-			<li class='list'> 7<sup>th</sup> place in the QUOTA examination score <i class="year"> (2015) </i> </li>
-			<li class='list'> Full score in the mathematics examination of the Ordinary National Educational Test (O-NET). <i class="year"> (2015) </i> </li>
-		</div>
-	</div> -->
-
-
-	<br><br><br>
 
 	<br>
 		<h1 class='header'> Selected Publications </h1>
@@ -689,7 +732,7 @@ div.announcement-box {
 	
 	
 
-	<br><br><br>
+	<br>
 
 	
 		
@@ -754,6 +797,70 @@ div.announcement-box {
 		</div>
 	</div>  -->
 
+	<br>
+		<h1 class='header'> Education </h1>
+		<h1 class='header'> <hr class='line' />  </h1>
+		<br>
+	<br>
+	<div class="wrapper">
+		<div class="iconcol"> <!-- icon column -->
+			<img src="pictures/icons/sdu.png" class="icon" style="margin-top: 40px"> </img>
+		</div>
+
+		<div class="noniconcol"> <!-- non-icon column -->
+			<h3 class='header'> M.Sc. Robot System (Advanced Robotics Technology)</h3>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> University of Southern Denmark (SDU), Denmark </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 11.5 / 12.0 (96%) </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Sep 2021 - Jun 2023 </i></p>
+			<br>
+			<h3 class='header' style="font-size:18px"> Achievements </h3>
+			<li class='list'> 1<sup>st</sup> place in <a href="https://www.sdu.dk/en/om-sdu/fakulteterne/teknik/nyt_fra_det_tekniske_fakultet/80-studerende-kom-med-autonome-loesninger-til-danfoss" style="text-decoration: none;"> the SDU Case Competition 2021 - Autonomous Hackathon </a>  </li>
+			<li class='list'> Finalist in the SDU Case Competition 2022 - Sustainable futures.  </li>
+			<li class='list'> <a href="https://www.sdu.dk/en/robotelite" style="text-decoration: none;"> Elite Summer School: Robotics and Entrepreneurship </a>   </li>
+		</div>
+	</div>
+	<br><br><br>
+
+	<div class="wrapper">
+		<div class="iconcol"> <!-- icon column -->
+			<img src="pictures/icons/kmutt.png" class="icon" style="margin-top: 80px"> </img>
+		</div>
+
+		<div class="noniconcol"> <!-- non-icon column -->
+			<h3 class='header'> B.Eng. Robotics and Automation Engineering</h3>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Institute of FIeld roBOtics (FIBO), King Mongkut’s University of Technology Thonburi (KMUTT), Thailand </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> Overall GPA 3.87 / 4.00 (97%) </p>
+			<p class='list' style="margin-left: 0px; padding-left:20px;"> <i> Jul 2015 - Jun 2019 </i></p>
+			<br>
+			<h3 class='header' style="font-size:18px"> Achievements </h3>
+			<li class='list'> Graduated with 1<sup>st</sup> class honors & in the top 3%. </li>
+			<li class='list'> <a href="https://www.kmutt.ac.th/en/education/scholarships/" style="text-decoration: none;"> Petchra Pra Jom Klao Bachelor Degree Scholarship: Academic Execellence. </a> </li>
+			<li class='list'> Thailand and Institute of Field Robotics Scholarship for New Research Initiatives. </li>
+			<li class='list'> Enhancing Student Mobility Scholarship. </li>
+			<li class='list'> <a href="https://geo.kmutt.ac.th/%e0%b8%ab%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%a3%e0%b8%b5%e0%b8%a2%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%a1%e0%b8%b5%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%81%e0%b8%9a%e0%b8%9a%e0%b8%81%e0%b8%b2/" style="text-decoration: none;"> Honors classes: mathematics and general physics </a> </li>
+		</div>
+	</div>
+	
+	<!--
+	<br><br><br>
+
+	<div class="wrapper">
+		<div class="iconcol"> 
+			<img src="pictures/icons/satit.png" class="icon"> </img>
+		</div>
+
+		<div class="noniconcol"> 
+			<h3 class='header'> High School Diploma (with focus in mathematics and sciences) </h3>
+			<p class='list'> Chiang Mai University Demonstration School, Chiang Mai, Thailand </p>
+			<p class='list'> Overall GPA 3.91 / 4.00 (98%) </p>
+			<p class='list'> <i> May 2012 - Mar 2015 </i></p>
+			<br>
+			<h3 class='header' style="font-size:18px"> Achievements </h3>
+			<li class='list'> 7<sup>th</sup> place in the QUOTA examination score <i class="year"> (2015) </i> </li>
+			<li class='list'> Full score in the mathematics examination of the Ordinary National Educational Test (O-NET). <i class="year"> (2015) </i> </li>
+		</div>
+	</div> -->
+
 
 	<br>
 		<h1 class='header'> Contact </h1>
@@ -768,7 +875,7 @@ div.announcement-box {
 
 
 
-	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 1 Jul 2025 </p>
+	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 3 Jul 2025 </p>
 	
 	</div> <!-- END main column -->
 

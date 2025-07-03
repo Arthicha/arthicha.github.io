@@ -24,21 +24,32 @@
 }
 
 .icon-bar {
-	width: 100%;
-	background-color: #AAABB8;
-	overflow: auto;
+  width: 100%;
+  background-color: #AAABB8;
+  overflow: auto;  /* keeps floats contained */
+  box-sizing: border-box;
+  /* padding-left if needed */
+}
+
+.icon-bar .name {
+  float: left;
+  padding: 10px 20px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .icon-bar a {
-	float: right;
-	width: 200px;
-	text-align: center;
-	padding: 10px 0;
-	transition: all 0.3s ease;
-	color: white;
-	font-size: 22px;
-	border-left:2px solid white;
-	font-family: sans-serif;
+  float: right;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 22px;
+  border-left: 2px solid white;
+  font-family: sans-serif;
 }
 
 .icon-bar a:hover {
@@ -317,6 +328,69 @@ video.res {
 	font-style: italic;
 }
 
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* optional, keep image responsive */
+  }
+
+  #slider {
+    display: block;
+    height: 400px;
+    width: 100%;
+    opacity: 0.75; /* use decimal for CSS opacity */
+  }
+
+.overlay-text {
+    position: absolute;
+    bottom: 30px;       /* distance from bottom */
+    right: 30px;        /* distance from right */
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 2px 4px rgba(1.0,1.0,1.0,0.7);
+    pointer-events: none;
+}
+
+.robot-quote {
+  font-style: italic;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 6px solid #00aaff;
+  padding: 1.5em 2em;
+  width: 600px; /* fixed width */
+  margin: 2em auto;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.robot-quote p {
+  margin: 0;
+  width: 600px; /* fixed width */
+  white-space: pre-line; /* keep whitespace for tabs */
+}
+
+.robot-quote footer {
+  margin-top: 1em;
+  font-weight: 700;
+  text-align: right;
+  color: #00aaff;
+  font-size: 1.3rem;
+}
+
+.fade-text {
+  opacity: 0;
+  width: 600px; /* fixed width */
+  transition: opacity 1.0s ease-in-out;
+  font-style: italic;
+  font-size: 25px;
+  color: white;
+  padding-left: 40px; /* optional for indentation */
+}
+
 </style>
 
 
@@ -347,6 +421,8 @@ video.res {
 
 		<div class="icon-bar"> <!-- top manu bar -->
 			
+			<div class="name"> Arthicha Srisuchinnawong </div>
+
 			<!-- <a href="education.html" style="text-decoration: none"> <b>EDUCATION</b></a>  -->
 			<!-- <a href="experience.html" style="text-decoration: none"> <b>EXPERIENCES</b></a> -->
 			<a href="talk.html" style="text-decoration: none"> <b>talks</b></a> 
@@ -358,7 +434,46 @@ video.res {
 		
 
 	<!-- cover picture -->
-	<img src="pictures/cover/cover0.png" id="slider" style="display:block;height:400px;width:100%;opacity:75%;"> </img>
+	
+	<div class="image-container">
+	  <img src="pictures/cover/cover0.png" id="slider" alt="Cover Image">
+	  <div class="overlay-text">
+  			<div class="robot-qoute">
+	  		<p style="font-size: 32px;">
+		    <b> Robots can be our friends</b>;</p>
+		    <p id="quote-line" class="fade-text">... </p>
+		  
+		</div>
+	</div>	
+	</div>
+
+	<script>
+		  const lines = [
+		  "friends who do the opposite of what we want,",
+		    "friends who break their own legs,",
+		    "and friends who heat up easily"
+		    
+		  ];
+
+		  let current = 0;
+		  const textEl = document.getElementById("quote-line");
+
+		  function showNextLine() {
+		    textEl.style.opacity = 0;
+
+		    setTimeout(() => {
+		      textEl.innerHTML = lines[current];
+		      textEl.style.opacity = 1;
+
+		      current = (current + 1) % lines.length;
+
+		      setTimeout(showNextLine, 5000); // hold for 2 sec
+		    }, 1000); // fade out duration
+		  }
+
+		  window.onload = showNextLine;
+	</script>
+
 
 	<br>
 		<h1 class="title">
@@ -521,14 +636,11 @@ video.res {
 	    <hr class='dashline' /> </h1> <br>
 
 	    <li class="list">
-						Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Pitiwut Teerakittikul, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2019) <b>Neural Control for Gait Generation and Adaptation of a Gecko Robot</b>, the 19th International Conference on Advanced Robotics (ICAR). DOI: 10.1109/ICAR46387.2019.8981580. <a href="https://ieeexplore.ieee.org/abstract/document/8981580" class="paperbutton"> Paper</a> &nbsp; <a href="https://www.manoonpong.com/ICAR2019/video.mp4" class="videobutton"> Video</a> 
+						Arthicha Srisuchinnawong, Donghao Shao, Potiwat Ngamkajornwiwat, Pitiwut Teerakittikul, Zhendong Dai, Aihong Ji, and Poramate Manoonpong (2019) <b>Neural Control for Gait Generation and Adaptation of a Gecko Robot</b>, the 19th International Conference on Advanced Robotics (ICAR). DOI: 10.1109/ICAR46387.2019.8981580. <a href="https://ieeexplore.ieee.org/abstract/document/8981580" class="paperbutton"> Paper</a> &nbsp; <a href="https://youtu.be/Uq8vQsu0m98" class="videobutton"> Video</a> 
 		</li>
-
 			<center>
-	        <video class="res" allow="autoplay; encrypted-media;" frameborder="0" controls loop autoplay>
-	        <source src="https://www.manoonpong.com/ICAR2019/video.mp4" type="video/mp4">
-	        </video>
-	        </center>
+	        <iframe width="840" height="472" src="https://www.youtube.com/embed/Uq8vQsu0m98?si=U9bFm5Y6t6gTk9yD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	        </center> <br>
 
 	    <hr class='dashline' /> </h1> <br>
 
@@ -572,7 +684,7 @@ video.res {
 	</ul>
 
 
-	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 1 Jul 2025 </p>
+	<p style="float: right;margin-bottom:20px;margin-top:20px;margin-right:20px;font-size:18px;color:#D5D5D5"> update 3 Jul 2025 </p>
 	
 	</div> <!-- END main column -->
 
